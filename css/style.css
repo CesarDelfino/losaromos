@@ -1,0 +1,681 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid blue; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a, li {
+    display: inline-block;
+    font-size: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+main {
+    min-height: 100vh;
+}
+/* ========================= */
+/* MENU DE NAVEGACION HEADER */
+/* ========================= */
+
+.navHeader {
+    background-color: #373737;
+}
+
+.navbar-nav .nav-link.active {
+    color: white;
+}
+
+.navbar a {
+    color: white;
+}
+
+.nav-item {
+    font-size: 25px;
+}
+
+.dropdown-menu {
+    background-color: #373737;
+}
+
+.navHeader__logo {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    margin-left: 30px;
+}
+
+.navHeader__logo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.ocultarItem {
+    display: none;
+}
+
+/* ============================= */
+/* SISTEMA RESPONSIVO HEADER NAV */
+/* ============================= */
+
+@media (max-width: 1023px) {
+    .navHeader {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .navHeader__logo {
+        margin: 0px;
+    }
+    
+    #navbarNavDropdown {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nav-link {
+        padding: 8px;
+    }
+
+    .nav-item {
+        font-size: 20px;
+    }
+
+    .dropdown-menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (max-width: 600px) {
+        .mostrarItem {
+            display: none;
+        }
+
+        .ocultarItem {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ocultarItem a {
+            font-size: 16px;
+            padding: 4px 16px;
+        }
+    }
+}
+
+/* ========================= */
+/* ===== PESTAÑA INDEX ===== */
+/* ========================= */
+
+#mainInicio {
+    background-image: url(/imagenes/imagenes/dj-girando-mezclando-rascando-controles-pista-plataforma-dj-estroboscopica-dj-music-club-life-concept.jpg);
+    background-size: cover;
+}
+
+#seccionBienvenidos {
+    display: flex;
+    flex-direction: column;
+}
+
+.seccionBienvenidos__titulos {
+    width: 100%;
+    color: white;
+    font-size: 30px;
+}
+
+.seccionBienvenidos__titulos h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    font-size: 40px;
+}
+
+.seccionBienvenidos__titulos h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.seccionBienvenidos__parrafo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.seccionBienvenidos__parrafo p {
+    width: 700px;
+    color: white;
+    font-size: 30px;
+}
+
+.seccionBienvenidos__linkCotizar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.seccionBienvenidos__linkCotizar a {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 50px;
+    background-color: #373737;
+    color: white;
+    padding: 10px;
+    width: 200px;
+    border-radius: 40px;
+    transition: 1s;
+}
+
+.seccionBienvenidos__linkCotizar a:hover {
+    background-color: #f5c15c;
+    transition: 2s;
+    color: #373737;
+    transition: color 1s;
+}
+
+/* ============================= */
+/* SISTEMA RESPONSIVO INDEX MAIN */
+/* ============================= */
+
+@media (max-width: 600px) {
+    .seccionBienvenidos__titulos h1 {
+        font-size: 30px;
+    }
+
+    .seccionBienvenidos__titulos h3 {
+        font-size: 30px;
+        margin-top: 50px;
+    }
+
+    .seccionBienvenidos__parrafo p {
+        font-size: 20px;
+    }
+
+    .seccionBienvenidos__linkCotizar a {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+}
+
+/* ========================= */
+/* PESTAÑA SERVICIOS */
+/* ========================= */
+#servicios div article {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    text-align: center;
+    text-align: top;
+    margin: 30px;
+}
+
+#servicios div {
+    text-align: center;
+}
+
+#servicios article img {
+    width: 200px;
+    height: 200px;
+}
+
+.servicios h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.servicios .boxServicio {
+    width: 200px;
+    height: 200px;
+    background-color: #af9c98;
+    margin-top: 20px;
+}
+/* ========================= */
+/* PESTAÑA IMAGENES */
+/* ========================= */
+#imagenes {
+    width: 100%;
+    height: 1100px;
+    position: relative;
+}
+
+#imagenes article img {
+    height: auto;
+}
+
+.imgagenes__parque {
+    position: absolute;
+    left: 20%;
+    top: 0;
+}
+
+.imagenes__palmeras {
+    position: absolute;
+    right: 20%;
+    top: 0;
+}
+
+.imagenes__mesaSalon {
+    position: absolute;
+    left: 20%;
+    bottom: 0;
+}
+
+.imagenes__coctel {
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+}
+
+.imagenes__coctel p {
+    font-size: 30px;
+    text-align: center;
+    background-color: cornflowerblue;
+    color: darkviolet;
+}
+
+#imagenes article img {
+    width: 500px;
+    height: 500px;
+}
+/* ========================= */
+/* PESTAÑA CONTACTO */
+/* ========================= */
+
+/* GRID CONTACTO */
+#contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 600px);
+    grid-template-areas: 
+    "gridForm gridDatosContacto"
+    "gridIframe gridIframe"
+    ;
+    /* border-top: 2px solid white; */
+}
+
+/* GRID ESTRUCTURA FORMULARIO DE CONTACTO */
+.gridForm {
+    grid-area: gridForm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-right: 2px solid white;
+    background: linear-gradient(#373737, #ead1cb);
+}
+
+.gridForm {
+    text-align: center;
+    width: 100%;
+}
+
+.contacto__formulario {
+    width: 70%;
+}
+
+.contacto__formulario h2 {
+    text-align: center;
+    text-decoration: underline;
+    margin: 10px 0;
+}
+
+.contacto__formulario p {
+    width: 100%;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.contacto__inputs {
+    width: 100%;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 4px solid #000;
+}
+
+.contacto__inputs::placeholder{
+    color: white;
+}
+
+form .contacto__textArea {
+    width: 100%;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 4px solid #000;
+}
+
+.contacto__textArea::placeholder{
+    color:  white;
+}
+
+.botonEnviar {
+    width: 140px;
+    color: white;
+    border-radius: 20px;
+    border: 5px solid #373737;
+    font-size: 30px;
+    background-color: #f5c15c;
+    transition: 1s;
+}
+
+.botonEnviar:hover {
+    background-color: #373737;
+    border-color: #f5c15c;
+    color: white;
+    transition: 1s;
+}
+
+/* ESTRUCTURA DATOS DE CONTACTO */
+.gridDatosContacto {
+    grid-area: gridDatosContacto;
+}
+
+.gridDatosContacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    grid-template-areas: 
+    "telEventos telTe"
+    "telTaberna telEstadia"
+    ;
+    padding-top: 8px;
+    background: linear-gradient(#373737, #ead1cb);
+}
+
+.telEventos {
+    grid-area: telEventos;
+}
+
+.telTe {
+    grid-area: telTe;
+}
+
+.telTaberna {
+    grid-area: telTaberna;
+}
+
+.telEstadia {
+    grid-area: telEstadia;
+}
+
+/* iconos y datos */
+.fa-solid {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #f5c15c;
+}
+
+.grupoDatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* ESTRUCTURA MAPA UBICACION */
+.gridIframe {
+    grid-area: gridIframe;
+}
+
+.gridIframe iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* ============================= */
+/* =SISTEMA RESPONSIVO CONTACTO= */
+/* ============================= */
+
+@media (max-width: 600px) {
+    #contacto {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px 600px 200px;
+        grid-template-areas: 
+        "gridDatosContacto"
+        "gridForm"
+        "gridIframe";
+    }
+
+    .gridDatosContacto {
+        grid-area: gridDatosContacto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 200px);
+        grid-template-areas: 
+        "telEventos telTe"
+        "telTaberna telEstadia"
+        ;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid #373737;
+    }
+
+    .gridForm {
+        background: linear-gradient(#ead1cb, #373737);
+    }
+}
+
+/* ========================= */
+/* PESTAÑA EVENTOS */
+/* ========================= */
+
+#eventos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.titEventosSociales {
+    text-align: center;
+}
+
+.eventos__sociales {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.cajaEventos {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 400px;
+}
+
+
+
+
+
+/* #eventos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 500px);
+    grid-template-areas: 
+    "eventos__sociales"
+    "eventos__corporativos"
+    "eventos__producciones"
+    ;
+}
+
+.eventos__sociales {
+    grid-area: eventos__sociales;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 450px;
+    grid-template-areas: 
+    "titEventosSociales titEventosSociales titEventosSociales"
+    "eventos__casamientos eventos__cumpleanios eventos__celebraciones"
+    ;
+    align-items: center;
+}
+
+.titEventosSociales {
+    grid-area: titEventosSociales;
+    margin-top: 10px;
+    margin-bottom: 0;
+    display: grid;
+    justify-content: center;
+}
+
+.eventos__casamientos {
+    grid-area: eventos__casamientos;
+    background-image: url(../imagenes/imagenes/novio-poniendo-anillo-dedo-novia.jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+.eventos__cumpleanios {
+    grid-area: eventos__cumpleanios;
+}
+
+.eventos__celebraciones {
+    grid-area: eventos__celebraciones;
+} */
+
+/* ========================= */
+/* MENU DE NAVEGACION FOOTER */
+/* ========================= */
+#navFooter {
+    margin-top: auto;
+    width: 100%;
+    height: 100px;
+    background-color: #373737;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navFooter__logo {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    margin-left: 30px;
+    padding: 4px 0;
+}
+
+.navFooter__logo a {
+    width: 100%;
+    height: 100%;
+}
+
+.navFooter__logo img {
+    height: 100%;
+    border-radius: 50%;
+    
+}
+
+.navFooter__links ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.navFooter__links a {
+    color: white;
+    margin: 10px;
+    font-size: 30px;
+}
+
+.navFooter__redes {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navFooter__redes a {
+    display: flex;
+    align-items: center;
+}
+
+.navFooter__redes img {
+    width: 100%;
+    height: 80%;
+    padding: 20px;
+}
+
+/* ============================= */
+/* SISTEMA RESPONSIVO FOOTER NAV */
+/* ============================= */
+
+@media (max-width: 1023px) {
+    #navFooter {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .navFooter__logo {
+        width: 100%;
+        margin: 0;
+    }
+
+    .navFooter__logo a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navFooter__logo img {
+        width: 200px;
+    }
+
+    .navFooter__links ul {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .navFooter__links a {
+        margin: 4px;
+        font-size: 30px;
+    }
+    
+    .navFooter__redes {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .navFooter__redes img {
+        width: 40px;
+        height: 40px;
+        padding: 2px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navFooter__links ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+    }
+
+    .navFooter__logo img {
+        width: 150px;
+    }
+
+    .navFooter__links a {
+        font-size: 20px;
+    }
+
+    .navFooter__redes {
+        margin-top: 0px;
+    }
+}
