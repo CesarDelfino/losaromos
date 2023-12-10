@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     /* border: 1px solid blue; */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 a, li {
@@ -211,85 +211,533 @@ main {
 }
 
 /* ========================= */
-/* PESTAÑA SERVICIOS */
+/* PESTAÑA GASTRONOMÍA */
 /* ========================= */
-#servicios div article {
-    width: 200px;
-    height: 200px;
-    display: inline-block;
-    text-align: center;
-    text-align: top;
-    margin: 30px;
+
+/* GRID GASTRONOMÍA */
+#mainGastronomia {
+    /* border: 10px solid #000; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "casaDeTe   casaDeTe"
+    "laTaberna  laTaberna"
+    ;
+    background-color: #fff7e9;
 }
 
-#servicios div {
-    text-align: center;
-}
-
-#servicios article img {
-    width: 200px;
-    height: 200px;
-}
-
-.servicios h2 {
-    text-align: center;
-    font-size: 50px;
-}
-
-.servicios .boxServicio {
-    width: 200px;
-    height: 200px;
-    background-color: #af9c98;
-    margin-top: 20px;
-}
-/* ========================= */
-/* PESTAÑA IMAGENES */
-/* ========================= */
-#imagenes {
-    width: 100%;
-    height: 1100px;
-    position: relative;
-}
-
-#imagenes article img {
+#casaDeTe {
+    grid-area: casaDeTe;
+    width: auto;
     height: auto;
 }
 
-.imgagenes__parque {
-    position: absolute;
-    left: 20%;
-    top: 0;
+#laTaberna {
+    grid-area: laTaberna;
 }
 
-.imagenes__palmeras {
-    position: absolute;
-    right: 20%;
-    top: 0;
+/* SECCIÓN CASA DE TÉ GASTRONOMÍA */
+.titCasaDeTe {
+    background-image: url(../imagenes/gastronomia/te-verde-oolong-tetera-tazon-grande.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
 }
 
-.imagenes__mesaSalon {
-    position: absolute;
-    left: 20%;
-    bottom: 0;
+.titCasaDeTe h2 {
+    color: white;
+    font-size: 70px;
+    margin-left: 30px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: 10px 5px 10px #fff7e9;
 }
 
-.imagenes__coctel {
-    position: absolute;
-    right: 20%;
-    bottom: 0;
+.secCasaDeTe {
+    display: flex;
+    justify-content: center;
+    margin: 200px 0 100px 0;
+    text-align: center;
 }
 
-.imagenes__coctel p {
+.secCasaDeTe__fechas {
+    display: flex;
+    width: 1060px;
+    height: 400px;
+    border: 2px solid #fa8072;
+    padding: 10px;
+    background-color: #373737;
+}
+
+.secCasaDeTe__divImg {
+    background-image: url(../imagenes/gastronomia/casa-de-te-tazas-tetera-junto-flores-frente-ventana-dia-lluvioso.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    width: 70%;
+    height: 100%;
+}
+
+.secCasaDeTe__titFechas {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: white;
+    align-items: center;
+}
+
+.secCasaDeTe__titHdos {
+    width: 100%;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.secCasaDeTe__titHdos h2 {
     font-size: 30px;
     text-align: center;
-    background-color: cornflowerblue;
-    color: darkviolet;
 }
 
-#imagenes article img {
-    width: 500px;
-    height: 500px;
+.secCasaDeTe__consRedSoc h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    width: 250px;
 }
+
+.casaDeTe__consRedes a {
+    color: #373737;
+    font-size: 30px;
+    margin: 10px;
+    transition: 1s;
+}
+
+.casaDeTe__consRedes a:hover {
+    color: #fa8072;
+    transition: 0.8s;
+}
+
+.secCasaDeTe__infoMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+.secCasaDeTe__info {
+    padding: 10px 50px 10px 10px;
+    width: auto;
+    height: auto;
+}
+
+#casaDeTe h3{
+    font-size: 28px;
+}
+
+#casaDeTe p {
+    font-size: 16px;
+}
+
+.secCasaDeTe__info p {
+    width: 600px;
+}
+
+.secCasaDeTe__menus {
+    padding: 10px;
+    text-align: center;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secCasaDeTe__menus p {
+    width: 250px;
+}
+
+.secCasaDeTe__menu {
+    height: auto;
+}
+
+/* SECCIÓN LA TABERNA GASTRONOMÍA */
+.titLaTaberna {
+    background-image: url(../imagenes/gastronomia/cerca-camarero-sirviendo-cerveza.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    max-width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.titLaTaberna h2 {
+    color: white;
+    font-size: 70px;
+    margin-left: 30px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: 10px 5px 10px #f5c15c;
+}
+
+.secLaTaberna__divImg {
+    background-image: url(../imagenes/gastronomia/pareja-camarera.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    width: 70%;
+    height: 100%;
+}
+
+.laTaberna__cartaDeVinos {
+    background-color: #373737;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.laTaberna__cartaDeVinos a {
+    color: #fff7e9;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.laTaberna__cartaDeVinos a:hover {
+    color: #fa8072;
+    transition: 1s;
+}
+
+.secCasaDeTe__titulosMenEsp {
+    margin-top: 20px;
+}
+
+/* SISTEMA RESPONSIVO GASTRONOMÍA */
+@media (max-width: 1023px) {
+    .titCasaDeTe,
+    .titLaTaberna {
+        height: 300px;
+    }
+
+    .secCasaDeTe {
+        margin-top: 100px;
+    }
+    
+    .secCasaDeTe__fechas {
+        width: 700px;
+    }
+
+    .secCasaDeTe__titFechas h2 {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .secCasaDeTe__infoMenu {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .secCasaDeTe__infoMenu p {
+        width: auto;
+        height: auto;
+    }
+
+    .secCasaDeTe__menus {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "secCasaDeTe__tituloMenu secCasaDeTe__titulosMenEsp"
+        "secCasaDeTe__menu       secCasaDeTe__menuEsp"
+        "laTaberna__cartaDeVinos secCasaDeTe__encargados"
+        ;
+        column-gap: 30px;
+        /* display: flex; */
+    }
+
+    .secCasaDeTe__tituloMenu {
+        grid-area: secCasaDeTe__tituloMenu;
+    }
+
+    .secCasaDeTe__menu {
+        grid-area: secCasaDeTe__menu;
+    }
+
+    .secCasaDeTe__titulosMenEsp {
+        grid-area: secCasaDeTe__titulosMenEsp;
+    }
+
+    .secCasaDeTe__menuEsp {
+        grid-area: secCasaDeTe__menuEsp;
+    }
+
+    .laTaberna__cartaDeVinos {
+        grid-area: laTaberna__cartaDeVinos;
+        width: 100%;
+    }
+
+    .secCasaDeTe__encargados {
+        grid-area: secCasaDeTe__encargados;
+    }
+
+    .secCasaDeTe__menus h3 {
+        margin-top: 0;
+    }
+    .secCasaDeTe__info {
+        padding: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .titCasaDeTe,
+    .titLaTaberna {
+        height: 200px;
+    }
+
+    .titCasaDeTe h2 {
+        font-size: 40px;
+    }
+    .titLaTaberna h2 {
+        font-size: 40px;
+    }
+
+    .secCasaDeTe__fechas {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 600px;
+        border: 2px solid #fa8072;
+        padding: 10px;
+        background-color: #373737;
+    }
+
+    .secCasaDeTe__divImg {
+        width: 100%;
+    }
+
+    .secCasaDeTe__titFechas {
+        width: 100%;
+    }
+
+    .secLaTaberna__divImg {
+        width: 100%;
+    }
+
+    .secCasaDeTe__menus {
+        padding: 0;
+    }
+}
+
+/* ========================= */
+/* PESTAÑA IMAGENES */
+/* ========================= */
+
+#imagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "areaUnoImg areaUnoImg"
+    "areaDosImg areaDosImg"
+    "areaTresImg areaTresImg"
+    ;
+    background-color: #fff7e9;
+}
+.areaUnoImg {
+    grid-area: areaUnoImg;
+    background-image: url(../imagenes/imagenes/salon-restaurante-adornado-flores.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 400px;
+}
+
+.areaUnoImg h1 {
+    font-size: 120px;
+    font-style: italic;
+    margin-left: 30px;
+    color: #373737;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff7e9;
+}
+
+.areaDosImg {
+    grid-area: areaDosImg;
+}
+
+.areaDosImg {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "areaDosImg__parDron areaDosImg__croquisSalon" 
+    "areaDosImg__parDron areaDosImg__croquisSalon"
+    ;
+    gap: 50px;
+}
+
+.areaDosImg__parDron {
+    grid-area: areaDosImg__parDron;
+    display: grid;
+    justify-content: end;
+    align-items: center;
+    margin-top: auto;
+}
+
+.areaDosImg__parrafo {
+    width: 300px;
+    text-align: center;
+}
+
+.areaDosImg__imagenDron img {
+    width: 300px;
+    height: 300px;
+}
+
+.areaDosImg__croquisSalon {
+    grid-area: areaDosImg__croquisSalon;
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    margin-top: auto;
+}
+
+.areaTresImg {
+    grid-area: areaTresImg;
+    
+}
+
+.areaTresImg {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-style: italic;
+    gap: 50px;
+}
+
+.areaTresImg img {
+    width: 300px;
+}
+
+@media (max-width: 1023px) {
+    #imagenes {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        ;
+        background-color: #fff7e9;
+    }
+
+    .areaDosImg {
+        grid-template-rows: 350px 500px;
+        grid-template-areas: 
+        "areaDosImg__parDron areaDosImg__parDron"
+        "areaDosImg__croquisSalon areaDosImg__croquisSalon"
+        ;
+    }
+
+    .areaDosImg__parDron {
+        display: grid;
+        grid-template-areas: 
+        "areaDosImg__parrafo areaDosImg__imagenDron" 
+        ;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .areaDosImg__parrafo {
+        grid-area: areaDosImg__parrafo;
+    }
+
+    .areaDosImg__parrafo p {
+        margin-bottom: 0;
+    }
+
+    .areaDosImg__imagenDron {
+        grid-area: areaDosImg__imagenDron;
+    }
+
+    .areaDosImg__croquisSalon {
+        display: grid;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .areaTresImg {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 250px 250px;
+        grid-template-areas: 
+        "imgRecepcion    imgEspExterior"
+        "imgSalPrincipal imgSalPrincipal"
+        ;
+        gap: 40px;
+        margin-top: 30px;
+    }
+        .imgRecepcion {
+            grid-area: imgRecepcion;
+        }
+
+        .imgEspExterior {
+            grid-area: imgEspExterior;
+        }
+
+        .imgSalPrincipal {
+            grid-area: imgSalPrincipal;
+            text-align: center;
+        }
+}
+
+@media (max-width: 768px) {
+    .areaUnoImg h1 {
+        font-size: 80px;
+    }
+    
+    .areaTresImg {
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+    }
+
+    .areaDosImg {
+        margin-bottom: 40px;
+        gap: 20px;
+    }
+
+    .areaDosImg__parDron {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .areaDosImg__imagenDron {
+        display: none;
+    }
+
+    .areaDosImg__croquisSalon img {
+        width: 300px;
+        height: 400px;
+    }
+}
+
 /* ========================= */
 /* PESTAÑA CONTACTO */
 /* ========================= */
@@ -314,8 +762,9 @@ main {
     justify-content: center;
     align-items: center;
     color: white;
-    border-right: 2px solid white;
-    background: linear-gradient(#373737, #ead1cb);
+    border-right: 2px solid transparent;
+    border-image: linear-gradient(to bottom, #fff7e9 0%, #373737 100%) 1;
+    background: linear-gradient(#373737, #fff7e9);
 }
 
 .gridForm {
@@ -380,7 +829,7 @@ form .contacto__textArea {
     transition: 1s;
 }
 
-/* ESTRUCTURA DATOS DE CONTACTO */
+/* GRID ESTRUCTURA DATOS DE CONTACTO */
 .gridDatosContacto {
     grid-area: gridDatosContacto;
 }
@@ -394,7 +843,8 @@ form .contacto__textArea {
     "telTaberna telEstadia"
     ;
     padding-top: 8px;
-    background: linear-gradient(#373737, #ead1cb);
+    background: linear-gradient(#373737, #fff7e9);
+    text-align: center;
 }
 
 .telEventos {
@@ -476,79 +926,112 @@ form .contacto__textArea {
 /* PESTAÑA EVENTOS */
 /* ========================= */
 
+#mainEventos {
+    background-color: #fff7e9;
+}
+
 #eventos {
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
-.titEventosSociales {
+.titEventos {
     text-align: center;
+    margin-top: 50px;
 }
 
-.eventos__sociales {
+.titEventos h2 {
+    font-size: 40px;
+    margin-bottom: 0;
+    color: #373737;
+    text-shadow: 7px 4px 5px #af9c98;
+}
+
+.seccionEventos {
     display: flex;
     justify-content: space-around;
+    margin-top: 100px;
     width: 100%;
-    margin-top: 30px;
+    height: 350px;
+    justify-content: center;
+    gap: 30px;
 }
 
 .cajaEventos {
     display: flex;
     flex-direction: column;
-    width: 25%;
-    height: 400px;
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    border: 1px solid #373737;
+    position: relative;
 }
 
-
-
-
-
-/* #eventos {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 500px);
-    grid-template-areas: 
-    "eventos__sociales"
-    "eventos__corporativos"
-    "eventos__producciones"
-    ;
+.cajaEventos img {
+    width: 300px;
+    height: 200px;
 }
 
-.eventos__sociales {
-    grid-area: eventos__sociales;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 50px 450px;
-    grid-template-areas: 
-    "titEventosSociales titEventosSociales titEventosSociales"
-    "eventos__casamientos eventos__cumpleanios eventos__celebraciones"
-    ;
-    align-items: center;
+.cajaEventos h3 {
+    font-size: 25px;
+    margin-top: 20px;
 }
 
-.titEventosSociales {
-    grid-area: titEventosSociales;
-    margin-top: 10px;
-    margin-bottom: 0;
-    display: grid;
+.cajaEventos a {
+    width: 50%;
+    font-size: 20px;
+    padding: 5px;
+    color: white;
+    background-color: #373737;
+    transition: 1s;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    border-radius: 5px;
+}
+
+.cajaEventos a:hover {
+    color: #f5c15c;
+    transition: 1s;
+}
+
+.titCotizacion {
+    display: flex;
+    width: 100%;
     justify-content: center;
+    padding-bottom: 30px;
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 100px;
 }
 
-.eventos__casamientos {
-    grid-area: eventos__casamientos;
-    background-image: url(../imagenes/imagenes/novio-poniendo-anillo-dedo-novia.jpg);
-    background-size: cover;
-    height: 100%;
+.titCotizacion a {
+    width: 70%;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 40px;
+    color: white;
+    background-color: #373737;
+    transition: 1s;
 }
 
-.eventos__cumpleanios {
-    grid-area: eventos__cumpleanios;
+.titCotizacion a:hover {
+    color: #f5c15c;
+    transition: 1s;
 }
 
-.eventos__celebraciones {
-    grid-area: eventos__celebraciones;
-} */
+/* ============================= */
+/*  SISTEMA RESPONSIVO EVENTOS   */
+/* ============================= */
+
+@media (max-width: 1023px) {
+    .seccionEventos {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+}
 
 /* ========================= */
 /* MENU DE NAVEGACION FOOTER */
@@ -592,7 +1075,7 @@ form .contacto__textArea {
 .navFooter__links a {
     color: white;
     margin: 10px;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .navFooter__redes {
@@ -643,7 +1126,6 @@ form .contacto__textArea {
     
     .navFooter__links a {
         margin: 4px;
-        font-size: 30px;
     }
     
     .navFooter__redes {
