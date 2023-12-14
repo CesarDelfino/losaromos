@@ -1,0 +1,96 @@
+/* ========================= */
+/* ===== PESTAÑA INDEX ===== */
+/* ========================= */
+
+#mainInicio {
+    background-image: url(/imagenes/imagenes/dj-girando-mezclando-rascando-controles-pista-plataforma-dj-estroboscopica-dj-music-club-life-concept.jpg);
+    background-size: cover;
+    #seccionBienvenidos {
+        display: flex;
+        flex-direction: column;
+        .titulos {
+            width: 100%;
+            color: white;
+            font-size: 30px;
+            h1 {
+                display: flex;
+                justify-content: center;
+                margin-top: 200px;
+                font-size: 40px;
+            }
+            h3 {
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+                margin-bottom: 20px;
+                font-size: 30px;
+            }
+        }
+        .parrafo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            p {
+                width: 700px;
+                color: white;
+                font-size: 30px;
+                margin: 20px;
+            }
+        }
+        .linkCotizar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            a {
+                text-align: center;
+                margin-top: 20px;
+                font-size: 40px;
+                font-weight: bold;
+                background-color: #373737;
+                color: white;
+                padding: 10px;
+                width: 200px;
+                border-radius: 40px;
+                transition: 1s;
+                &:hover {
+                    background-color: #f5c15c;
+                    transition: 2s;
+                    color: #373737;
+                    transition: color 1s;
+                }
+            }
+        }
+    }
+}
+
+/* ============================= */
+/* SISTEMA RESPONSIVO INDEX MAIN */
+/* ============================= */
+
+@media (max-width: 600px) {
+    #mainInicio {
+        #seccionBienvenidos {
+            .titulos {
+                h1 {
+                    font-size: 30px;
+                }
+                h3 {
+                    font-size: 30px;
+                    margin-top: 10px;
+                }
+            }
+            .parrafo {
+                p {
+                    font-size: 20px;
+                    margin: 20px;
+                }
+            }
+            .linkCotizar {
+                a {
+                    font-size: 30px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

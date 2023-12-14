@@ -1,1163 +1,1041 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* border: 1px solid blue; */
-    font-family: 'Poppins', sans-serif;
-}
-
-a, li {
-    display: inline-block;
-    font-size: none;
-    list-style: none;
-    text-decoration: none;
-}
-
-main {
-    min-height: 100vh;
-}
+@charset "UTF-8";
 /* ========================= */
 /* MENU DE NAVEGACION HEADER */
 /* ========================= */
-
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Agbalumo&family=Dancing+Script&family=Eczar&family=Inter:wght@100&family=Josefin+Sans:ital,wght@1,200;1,300&family=Poppins:ital,wght@1,200&family=Quattrocento:wght@700&family=Roboto+Slab:wght@900&family=Zen+Kaku+Gothic+Antique:wght@700&family=Zen+Kurenaido&display=swap");
 .navHeader {
-    background-color: #373737;
+  background-color: #373737;
 }
-
-.navbar-nav .nav-link.active {
-    color: white;
+.navHeader .navbar-nav .nav-link.active {
+  color: white;
 }
-
-.navbar a {
-    color: white;
+.navHeader a {
+  color: white;
 }
-
-.nav-item {
-    font-size: 25px;
+.navHeader .navHeader__logo {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  margin-left: 30px;
 }
-
-.dropdown-menu {
-    background-color: #373737;
+.navHeader .navHeader__logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
-
-.navHeader__logo {
-    display: flex;
-    align-items: center;
-    width: 200px;
-    height: 100px;
-    margin-left: 30px;
+.navHeader ul li {
+  font-size: 25px;
 }
-
-.navHeader__logo img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+.navHeader .dropdown-menu {
+  background-color: #373737;
 }
-
-.ocultarItem {
-    display: none;
+.navHeader #ocultarItem {
+  display: none;
+}
+.navHeader .dropdown-menu a {
+  padding: 8px;
 }
 
 /* ============================= */
 /* SISTEMA RESPONSIVO HEADER NAV */
 /* ============================= */
-
 @media (max-width: 1023px) {
-    .navHeader {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    .navHeader__logo {
-        margin: 0px;
-    }
-    
-    #navbarNavDropdown {
-        display: flex;
-        justify-content: center;
-    }
+  .navHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navHeader .navHeader__logo {
+    margin: 0px;
+  }
+  .navHeader #navbarNavDropdown {
+    display: flex;
+    justify-content: center;
+  }
+  .navHeader .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .navHeader .navbar-nav .nav-link {
+    padding: 8px;
+  }
+  .navHeader .navbar-nav ul li {
+    font-size: 20px;
+  }
+  .navHeader .navbar-nav .dropdown-menu.show {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .mostrarItem {
+    display: none;
+  }
+  .navbar-nav #ocultarItem {
+    display: flex;
+    flex-direction: column;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid blue; */
+  font-family: "Poppins", sans-serif;
+}
 
-    .navbar-nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
+a, li {
+  display: inline-block;
+  font-size: none;
+  list-style: none;
+  text-decoration: none;
+}
 
-    .nav-link {
-        padding: 8px;
-    }
-
-    .nav-item {
-        font-size: 20px;
-    }
-
-    .dropdown-menu.show {
-        display: flex;
-        flex-direction: column;
-    }
-
-    @media (max-width: 600px) {
-        .mostrarItem {
-            display: none;
-        }
-
-        .ocultarItem {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .ocultarItem a {
-            font-size: 16px;
-            padding: 4px 16px;
-        }
-    }
+main {
+  min-height: 100vh;
 }
 
 /* ========================= */
 /* ===== PESTAÑA INDEX ===== */
 /* ========================= */
-
 #mainInicio {
-    background-image: url(/imagenes/imagenes/dj-girando-mezclando-rascando-controles-pista-plataforma-dj-estroboscopica-dj-music-club-life-concept.jpg);
-    background-size: cover;
+  background-image: url(/imagenes/imagenes/dj-girando-mezclando-rascando-controles-pista-plataforma-dj-estroboscopica-dj-music-club-life-concept.jpg);
+  background-size: cover;
 }
-
-#seccionBienvenidos {
-    display: flex;
-    flex-direction: column;
+#mainInicio #seccionBienvenidos {
+  display: flex;
+  flex-direction: column;
 }
-
-.seccionBienvenidos__titulos {
-    width: 100%;
-    color: white;
-    font-size: 30px;
+#mainInicio #seccionBienvenidos .titulos {
+  width: 100%;
+  color: white;
+  font-size: 30px;
 }
-
-.seccionBienvenidos__titulos h1 {
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
-    font-size: 40px;
+#mainInicio #seccionBienvenidos .titulos h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  font-size: 40px;
 }
-
-.seccionBienvenidos__titulos h3 {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    margin-bottom: 20px;
-    font-size: 30px;
+#mainInicio #seccionBienvenidos .titulos h3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 30px;
 }
-
-.seccionBienvenidos__parrafo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+#mainInicio #seccionBienvenidos .parrafo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-
-.seccionBienvenidos__parrafo p {
-    width: 700px;
-    color: white;
-    font-size: 30px;
+#mainInicio #seccionBienvenidos .parrafo p {
+  width: 700px;
+  color: white;
+  font-size: 30px;
+  margin: 20px;
 }
-
-.seccionBienvenidos__linkCotizar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+#mainInicio #seccionBienvenidos .linkCotizar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-
-.seccionBienvenidos__linkCotizar a {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 50px;
-    background-color: #373737;
-    color: white;
-    padding: 10px;
-    width: 200px;
-    border-radius: 40px;
-    transition: 1s;
+#mainInicio #seccionBienvenidos .linkCotizar a {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: #373737;
+  color: white;
+  padding: 10px;
+  width: 200px;
+  border-radius: 40px;
+  transition: 1s;
 }
-
-.seccionBienvenidos__linkCotizar a:hover {
-    background-color: #f5c15c;
-    transition: 2s;
-    color: #373737;
-    transition: color 1s;
+#mainInicio #seccionBienvenidos .linkCotizar a:hover {
+  background-color: #f5c15c;
+  transition: 2s;
+  color: #373737;
+  transition: color 1s;
 }
 
 /* ============================= */
 /* SISTEMA RESPONSIVO INDEX MAIN */
 /* ============================= */
-
 @media (max-width: 600px) {
-    .seccionBienvenidos__titulos h1 {
-        font-size: 30px;
-    }
-
-    .seccionBienvenidos__titulos h3 {
-        font-size: 30px;
-        margin-top: 50px;
-    }
-
-    .seccionBienvenidos__parrafo p {
-        font-size: 20px;
-    }
-
-    .seccionBienvenidos__linkCotizar a {
-        font-size: 30px;
-        margin-top: 10px;
-    }
+  #mainInicio #seccionBienvenidos .titulos h1 {
+    font-size: 30px;
+  }
+  #mainInicio #seccionBienvenidos .titulos h3 {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  #mainInicio #seccionBienvenidos .parrafo p {
+    font-size: 20px;
+    margin: 20px;
+  }
+  #mainInicio #seccionBienvenidos .linkCotizar a {
+    font-size: 30px;
+    margin-top: 10px;
+  }
 }
-
 /* ========================= */
 /* PESTAÑA GASTRONOMÍA */
 /* ========================= */
-
 /* GRID GASTRONOMÍA */
 #mainGastronomia {
-    /* border: 10px solid #000; */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-    "casaDeTe   casaDeTe"
-    "laTaberna  laTaberna"
-    ;
-    background-color: #fff7e9;
+  /* border: 10px solid #000; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "casaDeTe   casaDeTe" "laTaberna  laTaberna";
+  background-color: #fff7e9;
 }
 
 #casaDeTe {
-    grid-area: casaDeTe;
-    width: auto;
-    height: auto;
+  grid-area: casaDeTe;
+  width: auto;
+  height: auto;
 }
 
 #laTaberna {
-    grid-area: laTaberna;
+  grid-area: laTaberna;
 }
 
 /* SECCIÓN CASA DE TÉ GASTRONOMÍA */
 .titCasaDeTe {
-    background-image: url(../imagenes/gastronomia/te-verde-oolong-tetera-tazon-grande.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat:no-repeat;
-    height: 400px;
-    display: flex;
-    align-items: center;
+  background-image: url(../imagenes/gastronomia/te-verde-oolong-tetera-tazon-grande.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
 }
 
 .titCasaDeTe h2 {
-    color: white;
-    font-size: 70px;
-    margin-left: 30px;
-    font-style: italic;
-    font-weight: bold;
-    letter-spacing: 5px;
-    text-shadow: 10px 5px 10px #fff7e9;
+  color: white;
+  font-size: 70px;
+  margin-left: 30px;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-shadow: 10px 5px 10px #fff7e9;
 }
 
 .secCasaDeTe {
-    display: flex;
-    justify-content: center;
-    margin: 200px 0 100px 0;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 200px 0 100px 0;
+  text-align: center;
 }
 
 .secCasaDeTe__fechas {
-    display: flex;
-    width: 1060px;
-    height: 400px;
-    border: 2px solid #fa8072;
-    padding: 10px;
-    background-color: #373737;
+  display: flex;
+  width: 1060px;
+  height: 400px;
+  border: 2px solid #fa8072;
+  padding: 10px;
+  background-color: #373737;
 }
 
 .secCasaDeTe__divImg {
-    background-image: url(../imagenes/gastronomia/casa-de-te-tazas-tetera-junto-flores-frente-ventana-dia-lluvioso.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    width: 70%;
-    height: 100%;
+  background-image: url(../imagenes/gastronomia/casa-de-te-tazas-tetera-junto-flores-frente-ventana-dia-lluvioso.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  width: 70%;
+  height: 100%;
 }
 
 .secCasaDeTe__titFechas {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    background-color: white;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: white;
+  align-items: center;
 }
 
 .secCasaDeTe__titHdos {
-    width: 100%;
-    margin-top: 80px;
-    text-align: center;
+  width: 100%;
+  margin-top: 80px;
+  text-align: center;
 }
 
 .secCasaDeTe__titHdos h2 {
-    font-size: 30px;
-    text-align: center;
+  font-size: 30px;
+  text-align: center;
 }
 
 .secCasaDeTe__consRedSoc h2 {
-    font-size: 20px;
-    margin-top: 30px;
-    width: 250px;
+  font-size: 20px;
+  margin-top: 30px;
+  width: 250px;
 }
 
 .casaDeTe__consRedes a {
-    color: #373737;
-    font-size: 30px;
-    margin: 10px;
-    transition: 1s;
+  color: #373737;
+  font-size: 30px;
+  margin: 10px;
+  transition: 1s;
 }
 
 .casaDeTe__consRedes a:hover {
-    color: #fa8072;
-    transition: 0.8s;
+  color: #fa8072;
+  transition: 0.8s;
 }
 
 .secCasaDeTe__infoMenu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: auto;
-    height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: auto;
+  height: auto;
 }
 
 .secCasaDeTe__info {
-    padding: 10px 50px 10px 10px;
-    width: auto;
-    height: auto;
+  padding: 10px 50px 10px 10px;
+  width: auto;
+  height: auto;
 }
 
-#casaDeTe h3{
-    font-size: 28px;
+#casaDeTe h3 {
+  font-size: 28px;
 }
 
 #casaDeTe p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .secCasaDeTe__info p {
-    width: 600px;
+  width: 600px;
 }
 
 .secCasaDeTe__menus {
-    padding: 10px;
-    text-align: center;
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 10px;
+  text-align: center;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .secCasaDeTe__menus p {
-    width: 250px;
+  width: 250px;
 }
 
 .secCasaDeTe__menu {
-    height: auto;
+  height: auto;
 }
 
 /* SECCIÓN LA TABERNA GASTRONOMÍA */
 .titLaTaberna {
-    background-image: url(../imagenes/gastronomia/cerca-camarero-sirviendo-cerveza.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat:no-repeat;
-    max-width: 100%;
-    height: 400px;
-    display: flex;
-    align-items: center;
+  background-image: url(../imagenes/gastronomia/cerca-camarero-sirviendo-cerveza.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
 }
 
 .titLaTaberna h2 {
-    color: white;
-    font-size: 70px;
-    margin-left: 30px;
-    font-style: italic;
-    font-weight: bold;
-    letter-spacing: 5px;
-    text-shadow: 10px 5px 10px #f5c15c;
+  color: white;
+  font-size: 70px;
+  margin-left: 30px;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-shadow: 10px 5px 10px #f5c15c;
 }
 
 .secLaTaberna__divImg {
-    background-image: url(../imagenes/gastronomia/pareja-camarera.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    width: 70%;
-    height: 100%;
+  background-image: url(../imagenes/gastronomia/pareja-camarera.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  width: 70%;
+  height: 100%;
 }
 
 .laTaberna__cartaDeVinos {
-    background-color: #373737;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 20px;
-    width: 200px;
-    height: 50px;
-    display: table-cell;
-    vertical-align: middle;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #373737;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  display: table-cell;
+  vertical-align: middle;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .laTaberna__cartaDeVinos a {
-    color: #fff7e9;
-    font-weight: bold;
-    transition: 1s;
+  color: #fff7e9;
+  font-weight: bold;
+  transition: 1s;
 }
 
 .laTaberna__cartaDeVinos a:hover {
-    color: #fa8072;
-    transition: 1s;
+  color: #fa8072;
+  transition: 1s;
 }
 
 .secCasaDeTe__titulosMenEsp {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 /* SISTEMA RESPONSIVO GASTRONOMÍA */
 @media (max-width: 1023px) {
-    .titCasaDeTe,
-    .titLaTaberna {
-        height: 300px;
-    }
-
-    .secCasaDeTe {
-        margin-top: 100px;
-    }
-    
-    .secCasaDeTe__fechas {
-        width: 700px;
-    }
-
-    .secCasaDeTe__titFechas h2 {
-        width: 100%;
-        font-size: 20px;
-        text-align: center;
-    }
-    
-    .secCasaDeTe__infoMenu {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .secCasaDeTe__infoMenu p {
-        width: auto;
-        height: auto;
-    }
-
-    .secCasaDeTe__menus {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: 
-        "secCasaDeTe__tituloMenu secCasaDeTe__titulosMenEsp"
-        "secCasaDeTe__menu       secCasaDeTe__menuEsp"
-        "laTaberna__cartaDeVinos secCasaDeTe__encargados"
-        ;
-        column-gap: 30px;
-        /* display: flex; */
-    }
-
-    .secCasaDeTe__tituloMenu {
-        grid-area: secCasaDeTe__tituloMenu;
-    }
-
-    .secCasaDeTe__menu {
-        grid-area: secCasaDeTe__menu;
-    }
-
-    .secCasaDeTe__titulosMenEsp {
-        grid-area: secCasaDeTe__titulosMenEsp;
-    }
-
-    .secCasaDeTe__menuEsp {
-        grid-area: secCasaDeTe__menuEsp;
-    }
-
-    .laTaberna__cartaDeVinos {
-        grid-area: laTaberna__cartaDeVinos;
-        width: 100%;
-    }
-
-    .secCasaDeTe__encargados {
-        grid-area: secCasaDeTe__encargados;
-    }
-
-    .secCasaDeTe__menus h3 {
-        margin-top: 0;
-    }
-    .secCasaDeTe__info {
-        padding: 0;
-    }
-}
-
-@media (max-width: 600px) {
-    .titCasaDeTe,
-    .titLaTaberna {
-        height: 200px;
-    }
-
-    .titCasaDeTe h2 {
-        font-size: 40px;
-    }
-    .titLaTaberna h2 {
-        font-size: 40px;
-    }
-
-    .secCasaDeTe__fechas {
-        display: flex;
-        flex-direction: column;
-        width: 400px;
-        height: 600px;
-        border: 2px solid #fa8072;
-        padding: 10px;
-        background-color: #373737;
-    }
-
-    .secCasaDeTe__divImg {
-        width: 100%;
-    }
-
-    .secCasaDeTe__titFechas {
-        width: 100%;
-    }
-
-    .secLaTaberna__divImg {
-        width: 100%;
-    }
-
-    .secCasaDeTe__menus {
-        padding: 0;
-    }
-}
-
-/* ========================= */
-/* PESTAÑA IMAGENES */
-/* ========================= */
-
-#imagenes {
+  .titCasaDeTe,
+  .titLaTaberna {
+    height: 300px;
+  }
+  .secCasaDeTe {
+    margin-top: 100px;
+  }
+  .secCasaDeTe__fechas {
+    width: 700px;
+  }
+  .secCasaDeTe__titFechas h2 {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+  .secCasaDeTe__infoMenu {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .secCasaDeTe__infoMenu p {
+    width: auto;
+    height: auto;
+  }
+  .secCasaDeTe__menus {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
-    grid-template-areas: 
-    "areaUnoImg areaUnoImg"
-    "areaDosImg areaDosImg"
-    "areaTresImg areaTresImg"
-    ;
-    background-color: #fff7e9;
+    grid-template-areas: "secCasaDeTe__tituloMenu secCasaDeTe__titulosMenEsp" "secCasaDeTe__menu       secCasaDeTe__menuEsp" "laTaberna__cartaDeVinos secCasaDeTe__encargados";
+    column-gap: 30px;
+    /* display: flex; */
+  }
+  .secCasaDeTe__tituloMenu {
+    grid-area: secCasaDeTe__tituloMenu;
+  }
+  .secCasaDeTe__menu {
+    grid-area: secCasaDeTe__menu;
+  }
+  .secCasaDeTe__titulosMenEsp {
+    grid-area: secCasaDeTe__titulosMenEsp;
+  }
+  .secCasaDeTe__menuEsp {
+    grid-area: secCasaDeTe__menuEsp;
+  }
+  .laTaberna__cartaDeVinos {
+    grid-area: laTaberna__cartaDeVinos;
+    width: 100%;
+  }
+  .secCasaDeTe__encargados {
+    grid-area: secCasaDeTe__encargados;
+  }
+  .secCasaDeTe__menus h3 {
+    margin-top: 0;
+  }
+  .secCasaDeTe__info {
+    padding: 0;
+  }
 }
-.areaUnoImg {
-    grid-area: areaUnoImg;
-    background-image: url(../imagenes/imagenes/salon-restaurante-adornado-flores.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+@media (max-width: 600px) {
+  .titCasaDeTe,
+  .titLaTaberna {
+    height: 200px;
+  }
+  .titCasaDeTe h2 {
+    font-size: 40px;
+  }
+  .titLaTaberna h2 {
+    font-size: 40px;
+  }
+  .secCasaDeTe__fechas {
     display: flex;
-    align-items: center;
-    height: 400px;
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+    border: 2px solid #fa8072;
+    padding: 10px;
+    background-color: #373737;
+  }
+  .secCasaDeTe__divImg {
+    width: 100%;
+  }
+  .secCasaDeTe__titFechas {
+    width: 100%;
+  }
+  .secLaTaberna__divImg {
+    width: 100%;
+  }
+  .secCasaDeTe__menus {
+    padding: 0;
+  }
+}
+/* ========================= */
+/* PESTAÑA IMAGENES */
+/* ========================= */
+#imagenes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "areaUnoImg areaUnoImg" "areaDosImg areaDosImg" "areaTresImg areaTresImg";
+  background-color: #fff7e9;
+}
+
+.areaUnoImg {
+  grid-area: areaUnoImg;
+  background-image: url(../imagenes/imagenes/salon-restaurante-adornado-flores.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  height: 400px;
 }
 
 .areaUnoImg h1 {
-    font-size: 120px;
-    font-style: italic;
-    margin-left: 30px;
-    color: #373737;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #fff7e9;
+  font-size: 120px;
+  font-style: italic;
+  margin-left: 30px;
+  color: #373737;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff7e9;
 }
 
 .areaDosImg {
-    grid-area: areaDosImg;
+  grid-area: areaDosImg;
 }
 
 .areaDosImg {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-    "areaDosImg__parDron areaDosImg__croquisSalon" 
-    "areaDosImg__parDron areaDosImg__croquisSalon"
-    ;
-    gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas: "areaDosImg__parDron areaDosImg__croquisSalon" "areaDosImg__parDron areaDosImg__croquisSalon";
+  gap: 50px;
 }
 
 .areaDosImg__parDron {
-    grid-area: areaDosImg__parDron;
-    display: grid;
-    justify-content: end;
-    align-items: center;
-    margin-top: auto;
+  grid-area: areaDosImg__parDron;
+  display: grid;
+  justify-content: end;
+  align-items: center;
+  margin-top: auto;
 }
 
 .areaDosImg__parrafo {
-    width: 300px;
-    text-align: center;
+  width: 300px;
+  text-align: center;
 }
 
 .areaDosImg__imagenDron img {
-    width: 300px;
-    height: 300px;
+  width: 300px;
+  height: 300px;
 }
 
 .areaDosImg__croquisSalon {
-    grid-area: areaDosImg__croquisSalon;
-    display: grid;
-    justify-content: start;
-    align-items: center;
-    margin-top: auto;
+  grid-area: areaDosImg__croquisSalon;
+  display: grid;
+  justify-content: start;
+  align-items: center;
+  margin-top: auto;
 }
 
 .areaTresImg {
-    grid-area: areaTresImg;
-    
+  grid-area: areaTresImg;
 }
 
 .areaTresImg {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-style: italic;
-    gap: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-style: italic;
+  gap: 50px;
 }
 
 .areaTresImg img {
-    width: 300px;
+  width: 300px;
 }
 
 @media (max-width: 1023px) {
-    #imagenes {
-        display: grid;
-        grid-template-rows: auto auto auto;
-        ;
-        background-color: #fff7e9;
-    }
-
-    .areaDosImg {
-        grid-template-rows: 350px 500px;
-        grid-template-areas: 
-        "areaDosImg__parDron areaDosImg__parDron"
-        "areaDosImg__croquisSalon areaDosImg__croquisSalon"
-        ;
-    }
-
-    .areaDosImg__parDron {
-        display: grid;
-        grid-template-areas: 
-        "areaDosImg__parrafo areaDosImg__imagenDron" 
-        ;
-        gap: 20px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .areaDosImg__parrafo {
-        grid-area: areaDosImg__parrafo;
-    }
-
-    .areaDosImg__parrafo p {
-        margin-bottom: 0;
-    }
-
-    .areaDosImg__imagenDron {
-        grid-area: areaDosImg__imagenDron;
-    }
-
-    .areaDosImg__croquisSalon {
-        display: grid;
-        justify-content: center;
-        margin-top: 0;
-    }
-
-    .areaTresImg {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 250px 250px;
-        grid-template-areas: 
-        "imgRecepcion    imgEspExterior"
-        "imgSalPrincipal imgSalPrincipal"
-        ;
-        gap: 40px;
-        margin-top: 30px;
-    }
-        .imgRecepcion {
-            grid-area: imgRecepcion;
-        }
-
-        .imgEspExterior {
-            grid-area: imgEspExterior;
-        }
-
-        .imgSalPrincipal {
-            grid-area: imgSalPrincipal;
-            text-align: center;
-        }
+  #imagenes {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    background-color: #fff7e9;
+  }
+  .areaDosImg {
+    grid-template-rows: 350px 500px;
+    grid-template-areas: "areaDosImg__parDron areaDosImg__parDron" "areaDosImg__croquisSalon areaDosImg__croquisSalon";
+  }
+  .areaDosImg__parDron {
+    display: grid;
+    grid-template-areas: "areaDosImg__parrafo areaDosImg__imagenDron";
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .areaDosImg__parrafo {
+    grid-area: areaDosImg__parrafo;
+  }
+  .areaDosImg__parrafo p {
+    margin-bottom: 0;
+  }
+  .areaDosImg__imagenDron {
+    grid-area: areaDosImg__imagenDron;
+  }
+  .areaDosImg__croquisSalon {
+    display: grid;
+    justify-content: center;
+    margin-top: 0;
+  }
+  .areaTresImg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px;
+    grid-template-areas: "imgRecepcion    imgEspExterior" "imgSalPrincipal imgSalPrincipal";
+    gap: 40px;
+    margin-top: 30px;
+  }
+  .imgRecepcion {
+    grid-area: imgRecepcion;
+  }
+  .imgEspExterior {
+    grid-area: imgEspExterior;
+  }
+  .imgSalPrincipal {
+    grid-area: imgSalPrincipal;
+    text-align: center;
+  }
 }
-
 @media (max-width: 768px) {
-    .areaUnoImg h1 {
-        font-size: 80px;
-    }
-    
-    .areaTresImg {
-        display: flex;
-        flex-direction: column;
-        margin-top: auto;
-    }
-
-    .areaDosImg {
-        margin-bottom: 40px;
-        gap: 20px;
-    }
-
-    .areaDosImg__parDron {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .areaDosImg__imagenDron {
-        display: none;
-    }
-
-    .areaDosImg__croquisSalon img {
-        width: 300px;
-        height: 400px;
-    }
+  .areaUnoImg h1 {
+    font-size: 80px;
+  }
+  .areaTresImg {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+  }
+  .areaDosImg {
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+  .areaDosImg__parDron {
+    display: flex;
+    flex-direction: column;
+  }
+  .areaDosImg__imagenDron {
+    display: none;
+  }
+  .areaDosImg__croquisSalon img {
+    width: 300px;
+    height: 400px;
+  }
 }
-
 /* ========================= */
 /* PESTAÑA CONTACTO */
 /* ========================= */
-
 /* GRID CONTACTO */
 #contacto {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 600px);
-    grid-template-areas: 
-    "gridForm gridDatosContacto"
-    "gridIframe gridIframe"
-    ;
-    /* border-top: 2px solid white; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 600px);
+  grid-template-areas: "gridForm gridDatosContacto" "gridIframe gridIframe";
+  /* border-top: 2px solid white; */
 }
 
 /* GRID ESTRUCTURA FORMULARIO DE CONTACTO */
 .gridForm {
-    grid-area: gridForm;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border-right: 2px solid transparent;
-    border-image: linear-gradient(to bottom, #fff7e9 0%, #373737 100%) 1;
-    background: linear-gradient(#373737, #fff7e9);
+  grid-area: gridForm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-right: 2px solid transparent;
+  border-image: linear-gradient(to bottom, #fff7e9 0%, #373737 100%) 1;
+  background: linear-gradient(#373737, #fff7e9);
 }
 
 .gridForm {
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 .contacto__formulario {
-    width: 70%;
+  width: 70%;
 }
 
 .contacto__formulario h2 {
-    text-align: center;
-    text-decoration: underline;
-    margin: 10px 0;
+  text-align: center;
+  text-decoration: underline;
+  margin: 10px 0;
 }
 
 .contacto__formulario p {
-    width: 100%;
-    font-size: 25px;
-    margin-bottom: 20px;
+  width: 100%;
+  font-size: 25px;
+  margin-bottom: 20px;
 }
 
 .contacto__inputs {
-    width: 100%;
-    font-size: 25px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 4px solid #000;
+  width: 100%;
+  font-size: 25px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 4px solid #000;
 }
 
-.contacto__inputs::placeholder{
-    color: white;
+.contacto__inputs::placeholder {
+  color: white;
 }
 
 form .contacto__textArea {
-    width: 100%;
-    font-size: 25px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 4px solid #000;
+  width: 100%;
+  font-size: 25px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 4px solid #000;
 }
 
-.contacto__textArea::placeholder{
-    color:  white;
+.contacto__textArea::placeholder {
+  color: white;
 }
 
 .botonEnviar {
-    width: 140px;
-    color: white;
-    border-radius: 20px;
-    border: 5px solid #373737;
-    font-size: 30px;
-    background-color: #f5c15c;
-    transition: 1s;
+  width: 140px;
+  color: white;
+  border-radius: 20px;
+  border: 5px solid #373737;
+  font-size: 30px;
+  background-color: #f5c15c;
+  transition: 1s;
 }
 
 .botonEnviar:hover {
-    background-color: #373737;
-    border-color: #f5c15c;
-    color: white;
-    transition: 1s;
+  background-color: #373737;
+  border-color: #f5c15c;
+  color: white;
+  transition: 1s;
 }
 
 /* GRID ESTRUCTURA DATOS DE CONTACTO */
 .gridDatosContacto {
-    grid-area: gridDatosContacto;
+  grid-area: gridDatosContacto;
 }
 
 .gridDatosContacto {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 250px);
-    grid-template-areas: 
-    "telEventos telTe"
-    "telTaberna telEstadia"
-    ;
-    padding-top: 8px;
-    background: linear-gradient(#373737, #fff7e9);
-    text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 250px);
+  grid-template-areas: "telEventos telTe" "telTaberna telEstadia";
+  padding-top: 8px;
+  background: linear-gradient(#373737, #fff7e9);
+  text-align: center;
 }
 
 .telEventos {
-    grid-area: telEventos;
+  grid-area: telEventos;
 }
 
 .telTe {
-    grid-area: telTe;
+  grid-area: telTe;
 }
 
 .telTaberna {
-    grid-area: telTaberna;
+  grid-area: telTaberna;
 }
 
 .telEstadia {
-    grid-area: telEstadia;
+  grid-area: telEstadia;
 }
 
 /* iconos y datos */
 .fa-solid {
-    font-size: 50px;
-    margin-bottom: 20px;
-    color: #f5c15c;
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #f5c15c;
 }
 
 .grupoDatos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 /* ESTRUCTURA MAPA UBICACION */
 .gridIframe {
-    grid-area: gridIframe;
+  grid-area: gridIframe;
 }
 
 .gridIframe iframe {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /* ============================= */
 /* =SISTEMA RESPONSIVO CONTACTO= */
 /* ============================= */
-
 @media (max-width: 600px) {
-    #contacto {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 400px 600px 200px;
-        grid-template-areas: 
-        "gridDatosContacto"
-        "gridForm"
-        "gridIframe";
-    }
-
-    .gridDatosContacto {
-        grid-area: gridDatosContacto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 200px);
-        grid-template-areas: 
-        "telEventos telTe"
-        "telTaberna telEstadia"
-        ;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 2px solid #373737;
-    }
-
-    .gridForm {
-        background: linear-gradient(#ead1cb, #373737);
-    }
+  #contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 600px 200px;
+    grid-template-areas: "gridDatosContacto" "gridForm" "gridIframe";
+  }
+  .gridDatosContacto {
+    grid-area: gridDatosContacto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    grid-template-areas: "telEventos telTe" "telTaberna telEstadia";
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #373737;
+  }
+  .gridForm {
+    background: linear-gradient(#ead1cb, #373737);
+  }
 }
-
 /* ========================= */
 /* PESTAÑA EVENTOS */
 /* ========================= */
-
 #mainEventos {
-    background-color: #fff7e9;
+  background-color: #fff7e9;
 }
 
 #eventos {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .titEventos {
-    text-align: center;
-    margin-top: 50px;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .titEventos h2 {
-    font-size: 40px;
-    margin-bottom: 0;
-    color: #373737;
-    text-shadow: 7px 4px 5px #af9c98;
+  font-size: 40px;
+  margin-bottom: 0;
+  color: #373737;
+  text-shadow: 7px 4px 5px #af9c98;
 }
 
 .seccionEventos {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 100px;
-    width: 100%;
-    height: 350px;
-    justify-content: center;
-    gap: 30px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  width: 100%;
+  height: 350px;
+  justify-content: center;
+  gap: 30px;
 }
 
 .cajaEventos {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 300px;
-    height: 350px;
-    border: 1px solid #373737;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 300px;
+  height: 350px;
+  border: 1px solid #373737;
+  position: relative;
 }
 
 .cajaEventos img {
-    width: 300px;
-    height: 200px;
+  width: 300px;
+  height: 200px;
 }
 
 .cajaEventos h3 {
-    font-size: 25px;
-    margin-top: 20px;
+  font-size: 25px;
+  margin-top: 20px;
 }
 
 .cajaEventos a {
-    width: 50%;
-    font-size: 20px;
-    padding: 5px;
-    color: white;
-    background-color: #373737;
-    transition: 1s;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translate(-50%, -10%);
-    border-radius: 5px;
+  width: 50%;
+  font-size: 20px;
+  padding: 5px;
+  color: white;
+  background-color: #373737;
+  transition: 1s;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  border-radius: 5px;
 }
 
 .cajaEventos a:hover {
-    color: #f5c15c;
-    transition: 1s;
+  color: #f5c15c;
+  transition: 1s;
 }
 
 .titCotizacion {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    padding-bottom: 30px;
-    margin-top: 100px;
-    text-align: center;
-    margin-bottom: 100px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 30px;
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 100px;
 }
 
 .titCotizacion a {
-    width: 70%;
-    font-size: 25px;
-    padding: 10px;
-    border-radius: 40px;
-    color: white;
-    background-color: #373737;
-    transition: 1s;
+  width: 70%;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 40px;
+  color: white;
+  background-color: #373737;
+  transition: 1s;
 }
 
 .titCotizacion a:hover {
-    color: #f5c15c;
-    transition: 1s;
+  color: #f5c15c;
+  transition: 1s;
 }
 
 /* ============================= */
 /*  SISTEMA RESPONSIVO EVENTOS   */
 /* ============================= */
-
 @media (max-width: 1023px) {
-    .seccionEventos {
-        flex-direction: column;
-        height: auto;
-        align-items: center;
-    }
+  .seccionEventos {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
 }
-
 /* ========================= */
 /* MENU DE NAVEGACION FOOTER */
 /* ========================= */
 #navFooter {
-    margin-top: auto;
-    width: 100%;
-    height: 100px;
-    background-color: #373737;
-    display: flex;
-    justify-content: space-between;
+  margin-top: auto;
+  width: 100%;
+  height: 100px;
+  background-color: #373737;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navFooter__logo {
-    display: flex;
-    align-items: center;
-    width: 200px;
-    height: 100px;
-    margin-left: 30px;
-    padding: 4px 0;
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  margin-left: 30px;
+  padding: 4px 0;
 }
 
 .navFooter__logo a {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .navFooter__logo img {
-    height: 100%;
-    border-radius: 50%;
-    
+  height: 100%;
+  border-radius: 50%;
 }
 
 .navFooter__links ul {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
 
 .navFooter__links a {
-    color: white;
-    margin: 10px;
-    font-size: 20px;
+  color: white;
+  margin: 10px;
+  font-size: 20px;
 }
 
 .navFooter__redes {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .navFooter__redes a {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navFooter__redes img {
-    width: 100%;
-    height: 80%;
-    padding: 20px;
+  width: 100%;
+  height: 80%;
+  padding: 20px;
 }
 
 /* ============================= */
 /* SISTEMA RESPONSIVO FOOTER NAV */
 /* ============================= */
-
 @media (max-width: 1023px) {
-    #navFooter {
-        height: auto;
-        flex-direction: column;
-    }
-
-    .navFooter__logo {
-        width: 100%;
-        margin: 0;
-    }
-
-    .navFooter__logo a {
-        display: flex;
-        justify-content: center;
-    }
-
-    .navFooter__logo img {
-        width: 200px;
-    }
-
-    .navFooter__links ul {
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 10px;
-    }
-    
-    .navFooter__links a {
-        margin: 4px;
-    }
-    
-    .navFooter__redes {
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .navFooter__redes img {
-        width: 40px;
-        height: 40px;
-        padding: 2px;
-        margin: 10px;
-    }
+  #navFooter {
+    height: auto;
+    flex-direction: column;
+  }
+  .navFooter__logo {
+    width: 100%;
+    margin: 0;
+  }
+  .navFooter__logo a {
+    display: flex;
+    justify-content: center;
+  }
+  .navFooter__logo img {
+    width: 200px;
+  }
+  .navFooter__links ul {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .navFooter__links a {
+    margin: 4px;
+  }
+  .navFooter__redes {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .navFooter__redes img {
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    margin: 10px;
+  }
 }
-
 @media (max-width: 600px) {
-    .navFooter__links ul {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        text-align: center;
-    }
-
-    .navFooter__logo img {
-        width: 150px;
-    }
-
-    .navFooter__links a {
-        font-size: 20px;
-    }
-
-    .navFooter__redes {
-        margin-top: 0px;
-    }
+  .navFooter__links ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+  }
+  .navFooter__logo img {
+    width: 150px;
+  }
+  .navFooter__links a {
+    font-size: 20px;
+  }
+  .navFooter__redes {
+    margin-top: 0px;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */
