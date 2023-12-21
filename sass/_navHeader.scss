@@ -1,6 +1,6 @@
-/* ========================= */
-/* MENU DE NAVEGACION HEADER */
-/* ========================= */
+  // ========================== \\ 
+ //          MENU HEADER         \\
+//   ==========================   \\
 
 .navHeader {
     background-color: #373737;
@@ -38,9 +38,9 @@
     }
 }
 
-/* ============================= */
-/* SISTEMA RESPONSIVO HEADER NAV */
-/* ============================= */
+  // ===========1023========== \\ 
+ //  SISTEMA RESPONSIVO HEADER  \\
+//   ============PX===========   \\
 
 @media (max-width: 1023px) {
     .navHeader {
@@ -71,6 +71,10 @@
         }
     }
 }
+
+  // ===========600=========== \\ 
+ //  SISTEMA RESPONSIVO HEADER  \\
+//   ===========P=X===========   \\
 
 @media (max-width: 600px) {
     .mostrarItem {

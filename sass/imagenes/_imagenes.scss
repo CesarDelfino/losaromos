@@ -1,0 +1,186 @@
+  // =========================== \\ 
+ //       PESTAÑA IMAGENES       \\
+//   ===========================   \\
+
+#imagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "areaUnoImg areaUnoImg"
+    "areaDosImg areaDosImg"
+    "areaTresImg areaTresImg"
+    ;
+    background-color: #fff7e9;
+    .areaUnoImg {
+        grid-area: areaUnoImg;
+        background-image: url(../imagenes/imagenes/salon-restaurante-adornado-flores.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        height: 400px;
+        h1 {
+            font-size: 120px;
+            font-style: italic;
+            margin-left: 30px;
+            color: #373737;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #fff7e9;
+        }
+    }
+    .areaDosImg {
+        grid-area: areaDosImg;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "areaDosImg__parDron areaDosImg__croquisSalon" 
+        "areaDosImg__parDron areaDosImg__croquisSalon"
+        ;
+        gap: 50px;
+        .areaDosImg__parDron {
+            grid-area: areaDosImg__parDron;
+            display: grid;
+            justify-content: end;
+            align-items: center;
+            margin-top: auto;
+            .areaDosImg__parrafo {
+                width: 300px;
+                text-align: center;
+            }
+            .areaDosImg__imagenDron {
+                img { // TRANSITION Y TRANSFORM APLICADOS
+                    width: 300px;
+                    height: 300px;
+                    transition: 1s;
+                    &:hover {
+                        transition: 1s;
+                        transform: scale(2, 2);
+                    }
+                }
+            }
+        }
+        .areaDosImg__croquisSalon {
+            grid-area: areaDosImg__croquisSalon;
+            display: grid;
+            justify-content: start;
+            align-items: center;
+            margin-top: auto;
+        }
+    }
+    .areaTresImg {
+        grid-area: areaTresImg;
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        margin-bottom: 30px;
+        text-align: center;
+        font-style: italic;
+        gap: 50px;
+        img {
+            width: 300px;
+        }
+    }
+}
+
+  // ============1023=========== \\ 
+ //  SISTEMA RESPONSIVO IMAGENES  \\
+//   =============PX============   \\ 
+
+@media (max-width: 1023px) {
+    #imagenes {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        ;
+        background-color: #fff7e9;
+        .areaDosImg {
+            grid-template-rows: 350px 500px;
+            grid-template-areas: 
+            "areaDosImg__parDron areaDosImg__parDron"
+            "areaDosImg__croquisSalon areaDosImg__croquisSalon"
+            ;
+            .areaDosImg__parDron {
+                display: grid;
+                grid-template-areas: 
+                "areaDosImg__parrafo areaDosImg__imagenDron" 
+                ;
+                gap: 20px;
+                justify-content: center;
+                align-items: center;
+                .areaDosImg__parrafo {
+                    grid-area: areaDosImg__parrafo;
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+                .areaDosImg__imagenDron {
+                    grid-area: areaDosImg__imagenDron;
+                }
+            }
+            .areaDosImg__croquisSalon {
+                display: grid;
+                justify-content: center;
+                margin-top: 0;
+            }
+        }
+        .areaTresImg {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 250px 250px;
+            grid-template-areas: 
+            "imgRecepcion    imgEspExterior"
+            "imgSalPrincipal imgSalPrincipal"
+            ;
+            gap: 40px;
+            margin-top: 30px;
+            .imgRecepcion {
+                grid-area: imgRecepcion;
+            }
+            .imgEspExterior {
+                grid-area: imgEspExterior;
+            }
+            .imgSalPrincipal {
+                grid-area: imgSalPrincipal;
+                text-align: center;
+            }
+        }
+    }
+}
+
+  // ============768============ \\ 
+ //  SISTEMA RESPONSIVO IMAGENES  \\
+//   ============P=X============   \\ 
+
+@media (max-width: 768px) {
+    #imagenes {
+        .areaUnoImg {
+            h1 {
+                font-size: 80px;
+            }
+        }
+        .areaDosImg {
+            margin-bottom: 40px;
+            gap: 20px;
+            .areaDosImg__parDron {
+                display: flex;
+                flex-direction: column;
+                .areaDosImg__imagenDron {
+                    display: none;
+                }
+            }
+            .areaDosImg__croquisSalon {
+                img {
+                    width: 300px;
+                    height: 400px;
+                }
+            }
+        }
+        .areaTresImg {
+            display: flex;
+            flex-direction: column;
+            margin-top: auto;
+        }
+    }
+}

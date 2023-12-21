@@ -1,0 +1,162 @@
+  // =========================== \\ 
+ //       PESTAÑA CONTACTO        \\
+//   ===========================   \\
+
+// ========== GRID CONTACTO
+#contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 600px);
+    grid-template-areas: 
+    "gridForm gridDatosContacto"
+    "gridIframe gridIframe"
+    /* border-top: 2px solid white; */
+    ;
+    // ========== ESTRUCTURA DEL FORMULARIO DE CONTACTO
+    .gridForm {
+        grid-area: gridForm;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-right: 2px solid transparent;
+        border-image: linear-gradient(to bottom, #fff7e9 0%, #373737 100%) 1;
+        background-image: linear-gradient(to bottom, #373737, #fff7e9);
+        text-align: center;
+        width: 100%;
+        .contacto__formulario {
+            width: 70%;
+            h2 {
+                text-align: center;
+                text-decoration: underline;
+                margin: 10px 0;
+            }
+            p {
+                width: 100%;
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+            .contacto__inputs {
+                width: 100%;
+                font-size: 25px;
+                background-color: transparent;
+                border: none;
+                border-bottom: 4px solid #000;
+                &::placeholder {
+                    color: white;
+                }
+            }
+            .contacto__textArea {
+                width: 100%;
+                font-size: 25px;
+                background-color: transparent;
+                border: none;
+                border-bottom: 4px solid #000;
+                &::placeholder {
+                    color:  white;
+                }
+            }
+            .botonEnviar { // TRANSITION APLICADO
+                width: 140px;
+                color: white;
+                border-radius: 20px;
+                border: 5px solid #373737;
+                font-size: 30px;
+                background-color: #f5c15c;
+                transition: 1s;
+                &:hover {
+                    background-color: #373737;
+                    border-color: #f5c15c;
+                    color: white;
+                    transition: 1s;
+                }
+            }
+        }
+    }
+    // ========== ESTRUCTURA DE DATOS DE CONTACTO
+    .gridDatosContacto {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 250px);
+        grid-template-areas: 
+        "telEventos telTe"
+        "telTaberna telEstadia"
+        ;
+        padding-top: 8px;
+        background: linear-gradient(#373737, #fff7e9);
+        text-align: center;
+        .telEventos {
+            grid-area: telEventos;
+        }
+        .telTe {
+            grid-area: telTe;
+        }
+        .telTaberna {
+            grid-area: telTaberna;
+        }
+        .telEstadia {
+            grid-area: telEstadia;
+        }
+        /* iconos y datos */
+        .fa-solid {
+        font-size: 50px;
+        margin-bottom: 20px;
+        color: #f5c15c;
+        }
+        .grupoDatos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+    }
+    // ========== ESTRUCTURA DEL MAPA DE UBICACION
+    .gridIframe {
+        grid-area: gridIframe;
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+  // ===========600============= \\ 
+ //  SISTEMA RESPONSIVO CONTACTO  \\
+//   ===========P=X============   \\
+
+@media (max-width: 600px) {
+    #contacto {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px 600px 200px;
+        grid-template-areas: 
+        "gridDatosContacto"
+        "gridForm"
+        "gridIframe";
+
+        .contacto__formulario {
+            h2 {
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
+
+        .gridDatosContacto {
+            grid-area: gridDatosContacto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            grid-template-areas: 
+            "telEventos telTe"
+            "telTaberna telEstadia"
+            ;
+            justify-content: center;
+            align-items: center;
+        }
+        .gridForm {
+            background: linear-gradient(#fff7e9, #373737);
+        }
+    }
+}

@@ -1,0 +1,125 @@
+  // ========================== \\ 
+ //          MENU FOOTER         \\
+//   ==========================   \\
+#navFooter {
+    margin-top: auto;
+    width: 100%;
+    height: 100px;
+    background-color: #373737;
+    display: flex;
+    justify-content: space-between;
+    .navFooter__logo {
+        display: flex;
+        align-items: center;
+        width: 200px;
+        height: 100px;
+        margin-left: 30px;
+        padding: 4px 0;
+        a {
+            width: 100%;
+        height: 100%;
+        }
+        img {
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+    .navFooter__links {
+        ul {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+        a {
+            color: white;
+            margin: 10px;
+            font-size: 20px;
+        }
+    }
+    .navFooter__redes {
+        display: flex;
+        justify-content: flex-end;
+        a {
+            display: flex;
+            align-items: center;
+        }
+        img {
+            width: 100%;
+            height: 80%;
+            padding: 20px;
+        }
+    }
+}
+
+  // ===========1023========== \\ 
+ //  SISTEMA RESPONSIVO FOOTER  \\
+//   ============PX===========   \\
+
+@media (max-width: 1023px) {
+    #navFooter {
+        height: auto;
+        flex-direction: column;
+        .navFooter__logo {
+            width: 100%;
+            margin: 0;
+            a {
+                display: flex;
+                justify-content: center;
+            }
+            img {
+                width: 200px;
+            }
+        }
+        .navFooter__links {
+            ul {
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            a {
+                margin: 4px;
+            }
+        }
+        .navFooter__redes {
+            justify-content: center;
+            margin-top: 10px;
+            img {
+                width: 40px;
+                height: 40px;
+                padding: 2px;
+                margin: 10px;
+            }
+        }
+    }
+}
+
+  // ===========600=========== \\ 
+ //  SISTEMA RESPONSIVO FOOTER  \\
+//   ===========P=X===========   \\
+
+@media (max-width: 600px) {
+    #navFooter {
+        .navFooter__links {
+            ul {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                text-align: center;
+            }
+        }
+        .navFooter__logo {
+            img {
+                width: 150px;
+            }
+        }
+        .navFooter__links {
+            a {
+                font-size: 20px;
+            }
+        }
+        .navFooter__redes {
+            margin-top: 0px;
+        }
+    }
+}

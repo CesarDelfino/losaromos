@@ -1,7 +1,4 @@
 @charset "UTF-8";
-/* ========================= */
-/* MENU DE NAVEGACION HEADER */
-/* ========================= */
 @import url("https://fonts.googleapis.com/css2?family=Abel&family=Agbalumo&family=Dancing+Script&family=Eczar&family=Inter:wght@100&family=Josefin+Sans:ital,wght@1,200;1,300&family=Poppins:ital,wght@1,200&family=Quattrocento:wght@700&family=Roboto+Slab:wght@900&family=Zen+Kaku+Gothic+Antique:wght@700&family=Zen+Kurenaido&display=swap");
 .navHeader {
   background-color: #373737;
@@ -37,9 +34,6 @@
   padding: 8px;
 }
 
-/* ============================= */
-/* SISTEMA RESPONSIVO HEADER NAV */
-/* ============================= */
 @media (max-width: 1023px) {
   .navHeader {
     display: flex;
@@ -181,10 +175,6 @@ main {
     margin-top: 10px;
   }
 }
-/* ========================= */
-/* PESTAÑA GASTRONOMÍA */
-/* ========================= */
-/* GRID GASTRONOMÍA */
 #mainGastronomia {
   /* border: 10px solid #000; */
   display: grid;
@@ -196,16 +186,13 @@ main {
 
 #casaDeTe {
   grid-area: casaDeTe;
-  width: auto;
-  height: auto;
 }
 
 #laTaberna {
   grid-area: laTaberna;
 }
 
-/* SECCIÓN CASA DE TÉ GASTRONOMÍA */
-.titCasaDeTe {
+.titCasaDeTe, .titLaTaberna {
   background-image: url(../imagenes/gastronomia/te-verde-oolong-tetera-tazon-grande.jpg);
   background-position: center;
   background-size: cover;
@@ -215,7 +202,7 @@ main {
   align-items: center;
 }
 
-.titCasaDeTe h2 {
+.titCasaDeTe .titCasaDeTeH2, .titLaTaberna .titCasaDeTeH2, .titLaTaberna h2 {
   color: white;
   font-size: 70px;
   margin-left: 30px;
@@ -285,6 +272,7 @@ main {
 .casaDeTe__consRedes a:hover {
   color: #fa8072;
   transition: 0.8s;
+  transform: rotate(360deg);
 }
 
 .secCasaDeTe__infoMenu {
@@ -331,25 +319,11 @@ main {
   height: auto;
 }
 
-/* SECCIÓN LA TABERNA GASTRONOMÍA */
 .titLaTaberna {
   background-image: url(../imagenes/gastronomia/cerca-camarero-sirviendo-cerveza.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  max-width: 100%;
-  height: 400px;
-  display: flex;
-  align-items: center;
 }
 
 .titLaTaberna h2 {
-  color: white;
-  font-size: 70px;
-  margin-left: 30px;
-  font-style: italic;
-  font-weight: bold;
-  letter-spacing: 5px;
   text-shadow: 10px 5px 10px #f5c15c;
 }
 
@@ -392,7 +366,6 @@ main {
   margin-top: 20px;
 }
 
-/* SISTEMA RESPONSIVO GASTRONOMÍA */
 @media (max-width: 1023px) {
   .titCasaDeTe,
   .titLaTaberna {
@@ -422,7 +395,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
-    grid-template-areas: "secCasaDeTe__tituloMenu secCasaDeTe__titulosMenEsp" "secCasaDeTe__menu       secCasaDeTe__menuEsp" "laTaberna__cartaDeVinos secCasaDeTe__encargados";
+    grid-template-areas: "secCasaDeTe__tituloMenu secCasaDeTe__titulosMenEsp" "secCasaDeTe__menu       secCasaDeTe__menuEsp" "laTaberna__cartaDeVinos secLaTaberna__encargados";
     column-gap: 30px;
     /* display: flex; */
   }
@@ -457,7 +430,7 @@ main {
   .titLaTaberna {
     height: 200px;
   }
-  .titCasaDeTe h2 {
+  .titCasaDeTe h2, .titLaTaberna h2 {
     font-size: 40px;
   }
   .titLaTaberna h2 {
@@ -485,9 +458,6 @@ main {
     padding: 0;
   }
 }
-/* ========================= */
-/* PESTAÑA IMAGENES */
-/* ========================= */
 #imagenes {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -495,8 +465,7 @@ main {
   grid-template-areas: "areaUnoImg areaUnoImg" "areaDosImg areaDosImg" "areaTresImg areaTresImg";
   background-color: #fff7e9;
 }
-
-.areaUnoImg {
+#imagenes .areaUnoImg {
   grid-area: areaUnoImg;
   background-image: url(../imagenes/imagenes/salon-restaurante-adornado-flores.jpg);
   background-repeat: no-repeat;
@@ -506,8 +475,7 @@ main {
   align-items: center;
   height: 400px;
 }
-
-.areaUnoImg h1 {
+#imagenes .areaUnoImg h1 {
   font-size: 120px;
   font-style: italic;
   margin-left: 30px;
@@ -515,50 +483,43 @@ main {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #fff7e9;
 }
-
-.areaDosImg {
+#imagenes .areaDosImg {
   grid-area: areaDosImg;
-}
-
-.areaDosImg {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto auto;
   grid-template-areas: "areaDosImg__parDron areaDosImg__croquisSalon" "areaDosImg__parDron areaDosImg__croquisSalon";
   gap: 50px;
 }
-
-.areaDosImg__parDron {
+#imagenes .areaDosImg .areaDosImg__parDron {
   grid-area: areaDosImg__parDron;
   display: grid;
   justify-content: end;
   align-items: center;
   margin-top: auto;
 }
-
-.areaDosImg__parrafo {
+#imagenes .areaDosImg .areaDosImg__parDron .areaDosImg__parrafo {
   width: 300px;
   text-align: center;
 }
-
-.areaDosImg__imagenDron img {
+#imagenes .areaDosImg .areaDosImg__parDron .areaDosImg__imagenDron img {
   width: 300px;
   height: 300px;
+  transition: 1s;
 }
-
-.areaDosImg__croquisSalon {
+#imagenes .areaDosImg .areaDosImg__parDron .areaDosImg__imagenDron img:hover {
+  transition: 1s;
+  transform: scale(2, 2);
+}
+#imagenes .areaDosImg .areaDosImg__croquisSalon {
   grid-area: areaDosImg__croquisSalon;
   display: grid;
   justify-content: start;
   align-items: center;
   margin-top: auto;
 }
-
-.areaTresImg {
+#imagenes .areaTresImg {
   grid-area: areaTresImg;
-}
-
-.areaTresImg {
   display: flex;
   justify-content: center;
   margin-top: 100px;
@@ -567,8 +528,7 @@ main {
   font-style: italic;
   gap: 50px;
 }
-
-.areaTresImg img {
+#imagenes .areaTresImg img {
   width: 300px;
 }
 
@@ -578,32 +538,32 @@ main {
     grid-template-rows: auto auto auto;
     background-color: #fff7e9;
   }
-  .areaDosImg {
+  #imagenes .areaDosImg {
     grid-template-rows: 350px 500px;
     grid-template-areas: "areaDosImg__parDron areaDosImg__parDron" "areaDosImg__croquisSalon areaDosImg__croquisSalon";
   }
-  .areaDosImg__parDron {
+  #imagenes .areaDosImg .areaDosImg__parDron {
     display: grid;
     grid-template-areas: "areaDosImg__parrafo areaDosImg__imagenDron";
     gap: 20px;
     justify-content: center;
     align-items: center;
   }
-  .areaDosImg__parrafo {
+  #imagenes .areaDosImg .areaDosImg__parDron .areaDosImg__parrafo {
     grid-area: areaDosImg__parrafo;
   }
-  .areaDosImg__parrafo p {
+  #imagenes .areaDosImg .areaDosImg__parDron .areaDosImg__parrafo p {
     margin-bottom: 0;
   }
-  .areaDosImg__imagenDron {
+  #imagenes .areaDosImg .areaDosImg__parDron .areaDosImg__imagenDron {
     grid-area: areaDosImg__imagenDron;
   }
-  .areaDosImg__croquisSalon {
+  #imagenes .areaDosImg .areaDosImg__croquisSalon {
     display: grid;
     justify-content: center;
     margin-top: 0;
   }
-  .areaTresImg {
+  #imagenes .areaTresImg {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 250px 250px;
@@ -611,207 +571,40 @@ main {
     gap: 40px;
     margin-top: 30px;
   }
-  .imgRecepcion {
+  #imagenes .areaTresImg .imgRecepcion {
     grid-area: imgRecepcion;
   }
-  .imgEspExterior {
+  #imagenes .areaTresImg .imgEspExterior {
     grid-area: imgEspExterior;
   }
-  .imgSalPrincipal {
+  #imagenes .areaTresImg .imgSalPrincipal {
     grid-area: imgSalPrincipal;
     text-align: center;
   }
 }
 @media (max-width: 768px) {
-  .areaUnoImg h1 {
+  #imagenes .areaUnoImg h1 {
     font-size: 80px;
   }
-  .areaTresImg {
-    display: flex;
-    flex-direction: column;
-    margin-top: auto;
-  }
-  .areaDosImg {
+  #imagenes .areaDosImg {
     margin-bottom: 40px;
     gap: 20px;
   }
-  .areaDosImg__parDron {
+  #imagenes .areaDosImg .areaDosImg__parDron {
     display: flex;
     flex-direction: column;
   }
-  .areaDosImg__imagenDron {
+  #imagenes .areaDosImg .areaDosImg__parDron .areaDosImg__imagenDron {
     display: none;
   }
-  .areaDosImg__croquisSalon img {
+  #imagenes .areaDosImg .areaDosImg__croquisSalon img {
     width: 300px;
     height: 400px;
   }
-}
-/* ========================= */
-/* PESTAÑA CONTACTO */
-/* ========================= */
-/* GRID CONTACTO */
-#contacto {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 600px);
-  grid-template-areas: "gridForm gridDatosContacto" "gridIframe gridIframe";
-  /* border-top: 2px solid white; */
-}
-
-/* GRID ESTRUCTURA FORMULARIO DE CONTACTO */
-.gridForm {
-  grid-area: gridForm;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  border-right: 2px solid transparent;
-  border-image: linear-gradient(to bottom, #fff7e9 0%, #373737 100%) 1;
-  background: linear-gradient(#373737, #fff7e9);
-}
-
-.gridForm {
-  text-align: center;
-  width: 100%;
-}
-
-.contacto__formulario {
-  width: 70%;
-}
-
-.contacto__formulario h2 {
-  text-align: center;
-  text-decoration: underline;
-  margin: 10px 0;
-}
-
-.contacto__formulario p {
-  width: 100%;
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-
-.contacto__inputs {
-  width: 100%;
-  font-size: 25px;
-  background-color: transparent;
-  border: none;
-  border-bottom: 4px solid #000;
-}
-
-.contacto__inputs::placeholder {
-  color: white;
-}
-
-form .contacto__textArea {
-  width: 100%;
-  font-size: 25px;
-  background-color: transparent;
-  border: none;
-  border-bottom: 4px solid #000;
-}
-
-.contacto__textArea::placeholder {
-  color: white;
-}
-
-.botonEnviar {
-  width: 140px;
-  color: white;
-  border-radius: 20px;
-  border: 5px solid #373737;
-  font-size: 30px;
-  background-color: #f5c15c;
-  transition: 1s;
-}
-
-.botonEnviar:hover {
-  background-color: #373737;
-  border-color: #f5c15c;
-  color: white;
-  transition: 1s;
-}
-
-/* GRID ESTRUCTURA DATOS DE CONTACTO */
-.gridDatosContacto {
-  grid-area: gridDatosContacto;
-}
-
-.gridDatosContacto {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 250px);
-  grid-template-areas: "telEventos telTe" "telTaberna telEstadia";
-  padding-top: 8px;
-  background: linear-gradient(#373737, #fff7e9);
-  text-align: center;
-}
-
-.telEventos {
-  grid-area: telEventos;
-}
-
-.telTe {
-  grid-area: telTe;
-}
-
-.telTaberna {
-  grid-area: telTaberna;
-}
-
-.telEstadia {
-  grid-area: telEstadia;
-}
-
-/* iconos y datos */
-.fa-solid {
-  font-size: 50px;
-  margin-bottom: 20px;
-  color: #f5c15c;
-}
-
-.grupoDatos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
-/* ESTRUCTURA MAPA UBICACION */
-.gridIframe {
-  grid-area: gridIframe;
-}
-
-.gridIframe iframe {
-  width: 100%;
-  height: 100%;
-}
-
-/* ============================= */
-/* =SISTEMA RESPONSIVO CONTACTO= */
-/* ============================= */
-@media (max-width: 600px) {
-  #contacto {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 400px 600px 200px;
-    grid-template-areas: "gridDatosContacto" "gridForm" "gridIframe";
-  }
-  .gridDatosContacto {
-    grid-area: gridDatosContacto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 200px);
-    grid-template-areas: "telEventos telTe" "telTaberna telEstadia";
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid #373737;
-  }
-  .gridForm {
-    background: linear-gradient(#ead1cb, #373737);
+  #imagenes .areaTresImg {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
   }
 }
 /* ========================= */
@@ -820,22 +613,40 @@ form .contacto__textArea {
 #mainEventos {
   background-color: #fff7e9;
 }
-
-#eventos {
+#mainEventos #eventos {
   display: flex;
   flex-direction: column;
 }
-
-.titEventos {
+#mainEventos #eventos .titEventos {
   text-align: center;
   margin-top: 50px;
 }
-
-.titEventos h2 {
+#mainEventos #eventos .titEventos h2 {
   font-size: 40px;
   margin-bottom: 0;
   color: #373737;
   text-shadow: 7px 4px 5px #af9c98;
+}
+#mainEventos #eventos .titCotizacion {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 30px;
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+#mainEventos #eventos .titCotizacion .titCotizacion__verIm a {
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 40px;
+  color: white;
+  background-color: #373737;
+  transition: 1s;
+}
+#mainEventos #eventos .titCotizacion .titCotizacion__verIm a:hover {
+  color: #f5c15c;
+  transition: 1s;
 }
 
 .seccionEventos {
@@ -847,8 +658,7 @@ form .contacto__textArea {
   justify-content: center;
   gap: 30px;
 }
-
-.cajaEventos {
+.seccionEventos .cajaEventos {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -857,18 +667,15 @@ form .contacto__textArea {
   border: 1px solid #373737;
   position: relative;
 }
-
-.cajaEventos img {
+.seccionEventos .cajaEventos img {
   width: 300px;
   height: 200px;
 }
-
-.cajaEventos h3 {
+.seccionEventos .cajaEventos h3 {
   font-size: 25px;
   margin-top: 20px;
 }
-
-.cajaEventos a {
+.seccionEventos .cajaEventos a {
   width: 50%;
   font-size: 20px;
   padding: 5px;
@@ -881,33 +688,7 @@ form .contacto__textArea {
   transform: translate(-50%, -10%);
   border-radius: 5px;
 }
-
-.cajaEventos a:hover {
-  color: #f5c15c;
-  transition: 1s;
-}
-
-.titCotizacion {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  padding-bottom: 30px;
-  margin-top: 100px;
-  text-align: center;
-  margin-bottom: 100px;
-}
-
-.titCotizacion a {
-  width: 70%;
-  font-size: 25px;
-  padding: 10px;
-  border-radius: 40px;
-  color: white;
-  background-color: #373737;
-  transition: 1s;
-}
-
-.titCotizacion a:hover {
+.seccionEventos .cajaEventos a:hover {
   color: #f5c15c;
   transition: 1s;
 }
@@ -920,11 +701,142 @@ form .contacto__textArea {
     flex-direction: column;
     height: auto;
     align-items: center;
+    justify-content: center;
   }
 }
-/* ========================= */
-/* MENU DE NAVEGACION FOOTER */
-/* ========================= */
+#contacto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 600px);
+  grid-template-areas: "gridForm gridDatosContacto" "gridIframe gridIframe";
+}
+#contacto .gridForm {
+  grid-area: gridForm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-right: 2px solid transparent;
+  border-image: linear-gradient(to bottom, #fff7e9 0%, #373737 100%) 1;
+  background-image: linear-gradient(to bottom, #373737, #fff7e9);
+  text-align: center;
+  width: 100%;
+}
+#contacto .gridForm .contacto__formulario {
+  width: 70%;
+}
+#contacto .gridForm .contacto__formulario h2 {
+  text-align: center;
+  text-decoration: underline;
+  margin: 10px 0;
+}
+#contacto .gridForm .contacto__formulario p {
+  width: 100%;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+#contacto .gridForm .contacto__formulario .contacto__inputs {
+  width: 100%;
+  font-size: 25px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 4px solid #000;
+}
+#contacto .gridForm .contacto__formulario .contacto__inputs::placeholder {
+  color: white;
+}
+#contacto .gridForm .contacto__formulario .contacto__textArea {
+  width: 100%;
+  font-size: 25px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 4px solid #000;
+}
+#contacto .gridForm .contacto__formulario .contacto__textArea::placeholder {
+  color: white;
+}
+#contacto .gridForm .contacto__formulario .botonEnviar {
+  width: 140px;
+  color: white;
+  border-radius: 20px;
+  border: 5px solid #373737;
+  font-size: 30px;
+  background-color: #f5c15c;
+  transition: 1s;
+}
+#contacto .gridForm .contacto__formulario .botonEnviar:hover {
+  background-color: #373737;
+  border-color: #f5c15c;
+  color: white;
+  transition: 1s;
+}
+#contacto .gridDatosContacto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 250px);
+  grid-template-areas: "telEventos telTe" "telTaberna telEstadia";
+  padding-top: 8px;
+  background: linear-gradient(#373737, #fff7e9);
+  text-align: center;
+  /* iconos y datos */
+}
+#contacto .gridDatosContacto .telEventos {
+  grid-area: telEventos;
+}
+#contacto .gridDatosContacto .telTe {
+  grid-area: telTe;
+}
+#contacto .gridDatosContacto .telTaberna {
+  grid-area: telTaberna;
+}
+#contacto .gridDatosContacto .telEstadia {
+  grid-area: telEstadia;
+}
+#contacto .gridDatosContacto .fa-solid {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #f5c15c;
+}
+#contacto .gridDatosContacto .grupoDatos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+#contacto .gridIframe {
+  grid-area: gridIframe;
+}
+#contacto .gridIframe iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  #contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 600px 200px;
+    grid-template-areas: "gridDatosContacto" "gridForm" "gridIframe";
+  }
+  #contacto .contacto__formulario h2 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  #contacto .gridDatosContacto {
+    grid-area: gridDatosContacto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    grid-template-areas: "telEventos telTe" "telTaberna telEstadia";
+    justify-content: center;
+    align-items: center;
+  }
+  #contacto .gridForm {
+    background: linear-gradient(#fff7e9, #373737);
+  }
+}
 #navFooter {
   margin-top: auto;
   width: 100%;
@@ -933,8 +845,7 @@ form .contacto__textArea {
   display: flex;
   justify-content: space-between;
 }
-
-.navFooter__logo {
+#navFooter .navFooter__logo {
   display: flex;
   align-items: center;
   width: 200px;
@@ -942,78 +853,68 @@ form .contacto__textArea {
   margin-left: 30px;
   padding: 4px 0;
 }
-
-.navFooter__logo a {
+#navFooter .navFooter__logo a {
   width: 100%;
   height: 100%;
 }
-
-.navFooter__logo img {
+#navFooter .navFooter__logo img {
   height: 100%;
   border-radius: 50%;
 }
-
-.navFooter__links ul {
+#navFooter .navFooter__links ul {
   height: 100%;
   display: flex;
   align-items: center;
   padding: 0;
 }
-
-.navFooter__links a {
+#navFooter .navFooter__links a {
   color: white;
   margin: 10px;
   font-size: 20px;
 }
-
-.navFooter__redes {
+#navFooter .navFooter__redes {
   display: flex;
   justify-content: flex-end;
 }
-
-.navFooter__redes a {
+#navFooter .navFooter__redes a {
   display: flex;
   align-items: center;
 }
-
-.navFooter__redes img {
+#navFooter .navFooter__redes img {
   width: 100%;
   height: 80%;
   padding: 20px;
 }
 
-/* ============================= */
-/* SISTEMA RESPONSIVO FOOTER NAV */
-/* ============================= */
 @media (max-width: 1023px) {
   #navFooter {
     height: auto;
     flex-direction: column;
   }
-  .navFooter__logo {
+  #navFooter .navFooter__logo {
     width: 100%;
     margin: 0;
   }
-  .navFooter__logo a {
+  #navFooter .navFooter__logo a {
     display: flex;
     justify-content: center;
   }
-  .navFooter__logo img {
+  #navFooter .navFooter__logo img {
     width: 200px;
   }
-  .navFooter__links ul {
+  #navFooter .navFooter__links ul {
     flex-direction: column;
     justify-content: center;
     margin-top: 10px;
   }
-  .navFooter__links a {
+  #navFooter .navFooter__links a {
     margin: 4px;
   }
-  .navFooter__redes {
+  #navFooter .navFooter__redes {
     justify-content: center;
     margin-top: 10px;
   }
-  .navFooter__redes img {
+  #navFooter .navFooter__redes img {
     width: 40px;
     height: 40px;
     padding: 2px;
@@ -1021,19 +922,19 @@ form .contacto__textArea {
   }
 }
 @media (max-width: 600px) {
-  .navFooter__links ul {
+  #navFooter .navFooter__links ul {
     display: flex;
     flex-direction: column;
     padding: 0;
     text-align: center;
   }
-  .navFooter__logo img {
+  #navFooter .navFooter__logo img {
     width: 150px;
   }
-  .navFooter__links a {
+  #navFooter .navFooter__links a {
     font-size: 20px;
   }
-  .navFooter__redes {
+  #navFooter .navFooter__redes {
     margin-top: 0px;
   }
 }
