@@ -9,7 +9,7 @@
         width: auto;
         height: auto;
         .titGastroCasaDeTe {
-            background-image: url(../imagenes/gastronomia/te-verde-oolong-tetera-tazon-grande.jpg);
+            background-image: url(/imagenes/gastronomia/te-verde-oolong-tetera-tazon-grande.jpg);
             background-position: center;
             background-size: cover;
             background-repeat:no-repeat;
@@ -28,7 +28,7 @@
         }
         .titGastroLaTaberna {
             @extend .titGastroCasaDeTe;
-            background-image: url(../imagenes/gastronomia/cerca-camarero-sirviendo-cerveza.jpg);
+            background-image: url(/imagenes/gastronomia/cerca-camarero-sirviendo-cerveza.jpg);
         }
         .secGastro {
             display: flex;
@@ -43,7 +43,7 @@
                 padding: 10px;
                 background-color: #373737;
                 .secGastroCasaDeTe__divImg {
-                    background-image: url(../imagenes/gastronomia/casa-de-te-tazas-tetera-junto-flores-frente-ventana-dia-lluvioso.jpg);
+                    background-image: url(/imagenes/gastronomia/casa-de-te-tazas-tetera-junto-flores-frente-ventana-dia-lluvioso.jpg);
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: bottom;
@@ -52,7 +52,7 @@
                 }
                 .secGastroLaTaberna__divImg {
                     @extend .secGastroCasaDeTe__divImg;
-                    background-image: url(../imagenes/gastronomia/pareja-camarera.jpg);
+                    background-image: url(/imagenes/gastronomia/pareja-camarera.jpg);
                 }
                 .secGastro__titFechas {
                     display: flex;
