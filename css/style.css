@@ -160,12 +160,30 @@ main {
 /* ============================= */
 /* SISTEMA RESPONSIVO INDEX MAIN */
 /* ============================= */
+@media (max-width: 1023px) {
+  #mainInicio #seccionBienvenidos .titulos h1 {
+    font-size: 35px;
+  }
+  #mainInicio #seccionBienvenidos .titulos h3 {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  #mainInicio #seccionBienvenidos .parrafo p {
+    font-size: 25px;
+    margin: 20px;
+  }
+  #mainInicio #seccionBienvenidos .linkCotizar a {
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
 @media (max-width: 600px) {
   #mainInicio #seccionBienvenidos .titulos h1 {
     font-size: 30px;
   }
   #mainInicio #seccionBienvenidos .titulos h3 {
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 10px;
   }
   #mainInicio #seccionBienvenidos .parrafo p {
