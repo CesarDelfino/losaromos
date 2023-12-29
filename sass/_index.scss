@@ -3,8 +3,9 @@
 /* ========================= */
 
 #mainInicio {
-    background-image: url(/imagenes/imagenes/dj-girando-mezclando-rascando-controles-pista-plataforma-dj-estroboscopica-dj-music-club-life-concept.jpg);
     background-size: cover;
+    background: linear-gradient(to bottom, rgb(0 0 0 / .7), rgb(0 0 0 / .3)), url(../imagenes/index/hermosa-zona-fotos-gran-corona-decorada-vegetacion-rosas-centro-mesa-velas-lados-guirnaldas-colgadas-arboles.jpg);
+    font-weight: bold;
     #seccionBienvenidos {
         display: flex;
         flex-direction: column;
@@ -24,6 +25,7 @@
                 margin-top: 50px;
                 margin-bottom: 20px;
                 font-size: 30px;
+                font-weight: bold;
             }
         }
         .parrafo {

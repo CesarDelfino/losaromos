@@ -95,8 +95,9 @@ main {
 /* ===== PESTAÑA INDEX ===== */
 /* ========================= */
 #mainInicio {
-  background-image: url(/imagenes/imagenes/dj-girando-mezclando-rascando-controles-pista-plataforma-dj-estroboscopica-dj-music-club-life-concept.jpg);
   background-size: cover;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(../imagenes/index/hermosa-zona-fotos-gran-corona-decorada-vegetacion-rosas-centro-mesa-velas-lados-guirnaldas-colgadas-arboles.jpg);
+  font-weight: bold;
 }
 #mainInicio #seccionBienvenidos {
   display: flex;
@@ -119,6 +120,7 @@ main {
   margin-top: 50px;
   margin-bottom: 20px;
   font-size: 30px;
+  font-weight: bold;
 }
 #mainInicio #seccionBienvenidos .parrafo {
   width: 100%;
@@ -176,20 +178,13 @@ main {
   }
 }
 #mainGastronomia {
-  /* border: 10px solid #000; */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas: "casaDeTe casaDeTe";
   background-color: #fff7e9;
 }
-
-#casaDeTe {
-  grid-area: casaDeTe;
+#mainGastronomia #gastronomia {
   width: auto;
   height: auto;
 }
-#casaDeTe .titCasaDeTe {
+#mainGastronomia #gastronomia .titGastroCasaDeTe, #mainGastronomia #gastronomia .titGastroLaTaberna {
   background-image: url(../imagenes/gastronomia/te-verde-oolong-tetera-tazon-grande.jpg);
   background-position: center;
   background-size: cover;
@@ -198,7 +193,7 @@ main {
   display: flex;
   align-items: center;
 }
-#casaDeTe .titCasaDeTe .titCasaDeTeH2 {
+#mainGastronomia #gastronomia .titGastroCasaDeTe .titGastroH2, #mainGastronomia #gastronomia .titGastroLaTaberna .titGastroH2 {
   color: white;
   font-size: 70px;
   margin-left: 30px;
@@ -207,13 +202,16 @@ main {
   letter-spacing: 5px;
   text-shadow: 10px 5px 10px #fff7e9;
 }
-#casaDeTe .secCasaDeTe {
+#mainGastronomia #gastronomia .titGastroLaTaberna {
+  background-image: url(../imagenes/gastronomia/cerca-camarero-sirviendo-cerveza.jpg);
+}
+#mainGastronomia #gastronomia .secGastro {
   display: flex;
   justify-content: center;
   margin: 100px 0 100px 0;
   text-align: center;
 }
-#casaDeTe .secCasaDeTe .secCasaDeTe__fechas {
+#mainGastronomia #gastronomia .secGastro .secGastro__fechas {
   display: flex;
   width: 1060px;
   height: 400px;
@@ -221,7 +219,7 @@ main {
   padding: 10px;
   background-color: #373737;
 }
-#casaDeTe .secCasaDeTe .secCasaDeTe__fechas .secCasaDeTe__divImg {
+#mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastroCasaDeTe__divImg, #mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastroLaTaberna__divImg {
   background-image: url(../imagenes/gastronomia/casa-de-te-tazas-tetera-junto-flores-frente-ventana-dia-lluvioso.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -229,131 +227,203 @@ main {
   width: 70%;
   height: 100%;
 }
-#casaDeTe .secCasaDeTe .secCasaDeTe__fechas .secCasaDeTe__titFechas {
+#mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastroLaTaberna__divImg {
+  background-image: url(../imagenes/gastronomia/pareja-camarera.jpg);
+}
+#mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastro__titFechas {
   display: flex;
   flex-direction: column;
   width: 30%;
   background-color: white;
   align-items: center;
 }
-#casaDeTe .secCasaDeTe .secCasaDeTe__fechas .secCasaDeTe__titFechas .secCasaDeTe__titHdos {
+#mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastro__titFechas .secGastro__titHdos {
   width: 100%;
   margin-top: 80px;
   text-align: center;
 }
-#casaDeTe .secCasaDeTe .secCasaDeTe__fechas .secCasaDeTe__titFechas .secCasaDeTe__titHdos h2 {
+#mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastro__titFechas .secGastro__titHdos h2 {
   font-size: 30px;
   text-align: center;
 }
-#casaDeTe .secCasaDeTe .secCasaDeTe__fechas .secCasaDeTe__titFechas .secCasaDeTe__consRedSoc h2 {
+#mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastro__titFechas .secGastro__consRedSoc h2 {
   font-size: 20px;
   margin-top: 30px;
   width: 250px;
 }
-#casaDeTe .secCasaDeTe .secCasaDeTe__fechas .secCasaDeTe__titFechas .casaDeTe__consRedes a {
+#mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastro__titFechas .secGastro__consRedes a {
   color: #373737;
   font-size: 30px;
   margin: 10px;
   transition: 1s;
 }
-#casaDeTe .secCasaDeTe .secCasaDeTe__fechas .secCasaDeTe__titFechas .casaDeTe__consRedes a:hover {
+#mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastro__titFechas .secGastro__consRedes a:hover {
   color: #fa8072;
   transition: 0.8s;
   transform: rotate(360deg);
 }
-#casaDeTe .secCasaDeTe__infoMenu {
+#mainGastronomia #gastronomia .secGastro__infoMenu {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
   width: auto;
   height: auto;
 }
-#casaDeTe .secCasaDeTe__infoMenu .secCasaDeTe__info {
+#mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__info {
   padding: 10px;
-  width: 1020px;
+  width: 750px;
+  padding-right: 40px;
 }
-#casaDeTe .secCasaDeTe__infoMenu .secCasaDeTe__menus {
+#mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas: "secCasaDeTe__tituloMenu secCasaDeTe__titulosMenEsp" "secCasaDeTe__menu       secCasaDeTe__menuEsp";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "secGastro__tituloMenu" "secGastro__menu" "secGastro__titulosMenEsp" "secGastro__menuEsp";
   column-gap: 70px;
   padding: 10px;
-  /* display: flex; */
 }
-#casaDeTe .secCasaDeTe__infoMenu .secCasaDeTe__menus .secCasaDeTe__tituloMenu {
-  grid-area: secCasaDeTe__tituloMenu;
+#mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus .secGastro__tituloMenu {
+  grid-area: secGastro__tituloMenu;
 }
-#casaDeTe .secCasaDeTe__infoMenu .secCasaDeTe__menus .secCasaDeTe__menu {
-  grid-area: secCasaDeTe__menu;
+#mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus .secGastro__menu {
+  grid-area: secGastro__menu;
 }
-#casaDeTe .secCasaDeTe__infoMenu .secCasaDeTe__menus .secCasaDeTe__titulosMenEsp {
-  grid-area: secCasaDeTe__titulosMenEsp;
+#mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus .secGastro__titulosMenEsp {
+  grid-area: secGastro__titulosMenEsp;
 }
-#casaDeTe .secCasaDeTe__infoMenu .secCasaDeTe__menus .secCasaDeTe__menuEsp {
-  grid-area: secCasaDeTe__menuEsp;
+#mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus .secGastro__menuEsp {
+  grid-area: secGastro__menuEsp;
   margin: 0;
   padding-bottom: 110px;
 }
-#casaDeTe .secCasaDeTe__infoMenu .secCasaDeTe__menus p {
+#mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus .laTaberna__cartaDeVinos {
+  background-color: #373737;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  display: table-cell;
+  vertical-align: middle;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus .laTaberna__cartaDeVinos a {
+  color: #fff7e9;
+  font-weight: bold;
+  transition: 1s;
+}
+#mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus .laTaberna__cartaDeVinos a:hover {
+  color: #fa8072;
+  transition: 1s;
+}
+#mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus p {
   width: 250px;
 }
-#casaDeTe .secCasaDeTe__infoMenu .secCasaDeTe__menus .secCasaDeTe__menu {
+#mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus .secGastro__menu {
   height: auto;
 }
-#casaDeTe h3 {
+#mainGastronomia #gastronomia h3 {
   font-size: 28px;
 }
-#casaDeTe p {
+#mainGastronomia #gastronomia p {
   font-size: 16px;
 }
 
 @media (max-width: 1023px) {
-  #casaDeTe .titCasaDeTe {
+  #mainGastronomia #gastronomia .titGastroCasaDeTe,
+  #mainGastronomia #gastronomia .titGastroLaTaberna {
     height: 200px;
   }
-  #casaDeTe .titCasaDeTe .titCasaDeTeH2 {
+  #mainGastronomia #gastronomia .titGastroCasaDeTe .titGastroH2,
+  #mainGastronomia #gastronomia .titGastroLaTaberna .titGastroH2 {
     font-size: 50px;
   }
-  #casaDeTe .secCasaDeTe__infoMenu .secCasaDeTe__info {
+  #mainGastronomia #gastronomia .secGastro__infoMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__info {
     padding: 10px;
     width: 600px;
   }
-  #casaDeTe .secCasaDeTe {
+  #mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "secGastro__tituloMenu secGastro__titulosMenEsp" "secGastro__menu       secGastro__menuEsp";
+  }
+  #mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus .secGastro__tituloMenu {
+    grid-area: secGastro__tituloMenu;
+  }
+  #mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus .secGastro__menu {
+    grid-area: secGastro__menu;
+    margin: 0;
+  }
+  #mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus .secGastro__titulosMenEsp {
+    grid-area: secGastro__titulosMenEsp;
+  }
+  #mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus .secGastro__menuEsp {
+    grid-area: secGastro__menuEsp;
+    margin: 0;
+    padding-bottom: 110px;
+  }
+  #mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus p {
+    width: 250px;
+  }
+  #mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus .laTaberna__cartaDeVinos {
+    width: auto;
+    font-size: 15px;
+  }
+  #mainGastronomia #gastronomia .secGastro {
     margin-top: 100px;
   }
-  #casaDeTe .secCasaDeTe .secCasaDeTe__fechas {
+  #mainGastronomia #gastronomia .secGastro .secGastro__fechas {
     width: 700px;
   }
-  #casaDeTe .secCasaDeTe .secCasaDeTe__fechas .secCasaDeTe__titFechas {
+  #mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastro__titFechas {
     justify-content: center;
   }
-  #casaDeTe .secCasaDeTe .secCasaDeTe__fechas .secCasaDeTe__titFechas .secCasaDeTe__titHdos {
+  #mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastro__titFechas .secGastro__titHdos {
     margin-top: 40px;
   }
-  #casaDeTe .secCasaDeTe .secCasaDeTe__fechas .secCasaDeTe__titFechas .secCasaDeTe__titHdos h2 {
+  #mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastro__titFechas .secGastro__titHdos h2 {
     font-size: 20px;
     width: auto;
   }
-  #casaDeTe .secCasaDeTe .secCasaDeTe__fechas .secCasaDeTe__titFechas .secCasaDeTe__consRedSoc h2 {
+  #mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastro__titFechas .secGastro__consRedSoc h2 {
     font-size: 15px;
     width: auto;
   }
 }
 @media (max-width: 600px) {
-  #casaDeTe .titCasaDeTe {
-    height: 150px;
-  }
-  #casaDeTe .titCasaDeTe .titCasaDeTeH2 {
+  #mainGastronomia #gastronomia .titGastroCasaDeTe .titGastroH2, #mainGastronomia #gastronomia .titGastroLaTaberna .titGastroH2 {
     font-size: 40px;
   }
-  #casaDeTe .secCasaDeTe__infoMenu .secCasaDeTe__info {
+  #mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__info {
     padding: 10px;
     width: auto;
   }
-  #casaDeTe .secCasaDeTe .secCasaDeTe__fechas {
+  #mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus {
+    column-gap: 20px;
+  }
+  #mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus h3 {
+    width: auto;
+    height: auto;
+  }
+  #mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus p {
+    width: auto;
+    height: auto;
+  }
+  #mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus .secGastro__menu {
+    padding: 0px;
+    height: auto;
+  }
+  #mainGastronomia #gastronomia .secGastro__infoMenu .secGastro__menus .laTaberna__cartaDeVinos {
+    width: auto;
+  }
+  #mainGastronomia #gastronomia .secGastro .secGastro__fechas {
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -362,22 +432,12 @@ main {
     padding: 10px;
     background-color: #373737;
   }
-  #casaDeTe .secCasaDeTe .secCasaDeTe__fechas .secCasaDeTe__divImg {
+  #mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastroCasaDeTe__divImg,
+  #mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastroLaTaberna__divImg {
     width: 100%;
   }
-  #casaDeTe .secCasaDeTe .secCasaDeTe__fechas .secCasaDeTe__titFechas {
+  #mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastro__titFechas {
     width: 100%;
-  }
-  #casaDeTe .secCasaDeTe__infoMenu .secCasaDeTe__menus {
-    column-gap: 20px;
-  }
-  #casaDeTe .secCasaDeTe__infoMenu .secCasaDeTe__menus h3 {
-    width: auto;
-    height: auto;
-  }
-  #casaDeTe .secCasaDeTe__infoMenu .secCasaDeTe__menus p {
-    width: auto;
-    height: auto;
   }
 }
 #imagenes {
@@ -389,7 +449,7 @@ main {
 }
 #imagenes .areaUnoImg {
   grid-area: areaUnoImg;
-  background-image: url(../imagenes/imagenes/salon-restaurante-adornado-flores.jpg);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(../imagenes/imagenes/salon-restaurante-adornado-flores.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -401,9 +461,7 @@ main {
   font-size: 120px;
   font-style: italic;
   margin-left: 30px;
-  color: #373737;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff7e9;
+  color: #fff7e9;
 }
 #imagenes .areaDosImg {
   grid-area: areaDosImg;

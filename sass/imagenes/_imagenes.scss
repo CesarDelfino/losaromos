@@ -14,7 +14,7 @@
     background-color: #fff7e9;
     .areaUnoImg {
         grid-area: areaUnoImg;
-        background-image: url(../imagenes/imagenes/salon-restaurante-adornado-flores.jpg);
+        background: linear-gradient(to right, rgb(0 0 0 / .8), rgb(0 0 0 / .2)), url(../imagenes/imagenes/salon-restaurante-adornado-flores.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -25,9 +25,7 @@
             font-size: 120px;
             font-style: italic;
             margin-left: 30px;
-            color: #373737;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: #fff7e9;
+            color: #fff7e9;
         }
     }
     .areaDosImg {

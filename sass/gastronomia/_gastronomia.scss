@@ -2,206 +2,242 @@
  //      PESTAÑA GASTRONOMÍA      \\
 //   ===========================   \\
 
-// ========== GRID GASTRONOMÍA
+// ========== GASTRONOMÍA
 #mainGastronomia {
-    /* border: 10px solid #000; */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-    "casaDeTe casaDeTe"
-    // "laTaberna  laTaberna"
-    ;
     background-color: #fff7e9;
-}
-// ========== SECCIÓN CASA DE TÉ GASTRONOMÍA
-#casaDeTe {
-    grid-area: casaDeTe;
-    width: auto;
-    height: auto;
-    .titCasaDeTe {
-        background-image: url(../imagenes/gastronomia/te-verde-oolong-tetera-tazon-grande.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat:no-repeat;
-        height: 300px;
-        display: flex;
-        align-items: center;
-        .titCasaDeTeH2 {
-            color: white;
-            font-size: 70px;
-            margin-left: 30px;
-            font-style: italic;
-            font-weight: bold;
-            letter-spacing: 5px;
-            text-shadow: 10px 5px 10px #fff7e9;
-        }
-    }
-    .secCasaDeTe {
-        display: flex;
-        justify-content: center;
-        margin: 100px 0 100px 0;
-        text-align: center;
-        .secCasaDeTe__fechas {
+    #gastronomia {
+        width: auto;
+        height: auto;
+        .titGastroCasaDeTe {
+            background-image: url(../imagenes/gastronomia/te-verde-oolong-tetera-tazon-grande.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+            height: 300px;
             display: flex;
-            width: 1060px;
-            height: 400px;
-            border: 2px solid #fa8072;
-            padding: 10px;
-            background-color: #373737;
-            .secCasaDeTe__divImg {
-                background-image: url(../imagenes/gastronomia/casa-de-te-tazas-tetera-junto-flores-frente-ventana-dia-lluvioso.jpg);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: bottom;
-                width: 70%;
-                height: 100%;
+            align-items: center;
+            .titGastroH2 {
+                color: white;
+                font-size: 70px;
+                margin-left: 30px;
+                font-style: italic;
+                font-weight: bold;
+                letter-spacing: 5px;
+                text-shadow: 10px 5px 10px #fff7e9;
             }
-            .secCasaDeTe__titFechas {
+        }
+        .titGastroLaTaberna {
+            @extend .titGastroCasaDeTe;
+            background-image: url(../imagenes/gastronomia/cerca-camarero-sirviendo-cerveza.jpg);
+        }
+        .secGastro {
+            display: flex;
+            justify-content: center;
+            margin: 100px 0 100px 0;
+            text-align: center;
+            .secGastro__fechas {
                 display: flex;
-                flex-direction: column;
-                width: 30%;
-                background-color: white;
-                align-items: center;
-                .secCasaDeTe__titHdos {
-                    width: 100%;
-                    margin-top: 80px;
-                    text-align: center;
-                    h2 {
-                        font-size: 30px;
+                width: 1060px;
+                height: 400px;
+                border: 2px solid #fa8072;
+                padding: 10px;
+                background-color: #373737;
+                .secGastroCasaDeTe__divImg {
+                    background-image: url(../imagenes/gastronomia/casa-de-te-tazas-tetera-junto-flores-frente-ventana-dia-lluvioso.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: bottom;
+                    width: 70%;
+                    height: 100%;
+                }
+                .secGastroLaTaberna__divImg {
+                    @extend .secGastroCasaDeTe__divImg;
+                    background-image: url(../imagenes/gastronomia/pareja-camarera.jpg);
+                }
+                .secGastro__titFechas {
+                    display: flex;
+                    flex-direction: column;
+                    width: 30%;
+                    background-color: white;
+                    align-items: center;
+                    .secGastro__titHdos {
+                        width: 100%;
+                        margin-top: 80px;
                         text-align: center;
+                        h2 {
+                            font-size: 30px;
+                            text-align: center;
+                        }
                     }
-                }
-                .secCasaDeTe__consRedSoc {
-                    h2 {
-                        font-size: 20px;
-                        margin-top: 30px;
-                        width: 250px;
+                    .secGastro__consRedSoc {
+                        h2 {
+                            font-size: 20px;
+                            margin-top: 30px;
+                            width: 250px;
+                        }
                     }
-                }
-                .casaDeTe__consRedes { // TRANSITION APLICADO
-                    a {
-                        color: #373737;
-                        font-size: 30px;
-                        margin: 10px;
-                        transition: 1s;
-                        &:hover{
-                            color: #fa8072;
-                            transition: 0.8s;
-                            transform: rotate(360deg);
+                    .secGastro__consRedes { // TRANSITION APLICADO
+                        a {
+                            color: #373737;
+                            font-size: 30px;
+                            margin: 10px;
+                            transition: 1s;
+                            &:hover{
+                                color: #fa8072;
+                                transition: 0.8s;
+                                transform: rotate(360deg);
+                            }
                         }
                     }
                 }
             }
         }
-    }
-    .secCasaDeTe__infoMenu {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: auto;
-        height: auto;
-        .secCasaDeTe__info {
-            padding: 10px;
-            width: 1020px;
+        .secGastro__infoMenu {
+            display: flex;
+            justify-content: center;
+            width: auto;
+            height: auto;
+            .secGastro__info {
+                padding: 10px;
+                width: 750px;
+                padding-right: 40px;
+            }
+            .secGastro__menus {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto auto;
+                grid-template-areas: 
+                "secGastro__tituloMenu"
+                "secGastro__menu"
+                "secGastro__titulosMenEsp"
+                "secGastro__menuEsp"
+                ;
+                column-gap: 70px;
+                padding: 10px;
+                .secGastro__tituloMenu {
+                    grid-area: secGastro__tituloMenu;
+                }
+                .secGastro__menu {
+                    grid-area: secGastro__menu;
+                }
+                .secGastro__titulosMenEsp {
+                    grid-area: secGastro__titulosMenEsp;
+                }
+                .secGastro__menuEsp {
+                    grid-area: secGastro__menuEsp;
+                    margin: 0;
+                    padding-bottom: 110px;
+                }
+                .laTaberna__cartaDeVinos {
+                    background-color: #373737;
+                    border-radius: 50px;
+                    text-align: center;
+                    font-size: 20px;
+                    width: 200px;
+                    height: 50px;
+                    display: table-cell;
+                    vertical-align: middle;
+                    margin-bottom: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    a {
+                        color: #fff7e9;
+                        font-weight: bold;
+                        transition: 1s;
+                        &:hover {
+                            color: #fa8072;
+                            transition: 1s;
+                        }
+                    }
+                }
+                p {
+                    width: 250px;
+                }
+                .secGastro__menu {
+                    height: auto;
+                }
+            }
         }
-        .secCasaDeTe__menus {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto;
-            grid-template-areas: 
-            "secCasaDeTe__tituloMenu secCasaDeTe__titulosMenEsp"
-            "secCasaDeTe__menu       secCasaDeTe__menuEsp"
-            ;
-            column-gap: 70px;
-            padding: 10px;
-            /* display: flex; */
-            .secCasaDeTe__tituloMenu {
-                grid-area: secCasaDeTe__tituloMenu;
-            }
-            .secCasaDeTe__menu {
-                grid-area: secCasaDeTe__menu;
-            }
-            .secCasaDeTe__titulosMenEsp {
-                grid-area: secCasaDeTe__titulosMenEsp;
-            }
-            .secCasaDeTe__menuEsp {
-                grid-area: secCasaDeTe__menuEsp;
-                margin: 0;
-                padding-bottom: 110px;
-            }
-            p {
-                width: 250px;
-            }
-            .secCasaDeTe__menu {
-                height: auto;
-            }
+        h3 {
+            font-size: 28px;
         }
-    }
-    // .secCasaDeTe__infoMenu {
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: center;
-    //     text-align: center;
-    //     .secCasaDeTe__info {
-    //         padding: 10px 50px 10px 10px;
-    //     }
-    //     .secCasaDeTe__menus {
-    //         padding: 10px;
-    //         p {
-    //             width: 250px;
-    //         }
-    //         .secCasaDeTe__menu {
-    //             height: auto;
-    //         }
-    //     }
-    // }
-    h3 {
-        font-size: 28px;
-    }
-    p {
-        font-size: 16px;
+        p {
+            font-size: 16px;
+        }
     }
 }
-
-
 
   // ============1023============== \\ 
  //  SISTEMA RESPONSIVO GASTRONOMÍA  \\
 //   =============PX===============   \\
 @media (max-width: 1023px) {
-    #casaDeTe {
-        .titCasaDeTe {
-            height: 200px;
-            .titCasaDeTeH2 {
-                font-size: 50px;
+#mainGastronomia {
+        #gastronomia {
+            .titGastroCasaDeTe,
+            .titGastroLaTaberna {
+                height: 200px;
+                .titGastroH2 {
+                    font-size: 50px;
+                }
             }
-        }
-        .secCasaDeTe__infoMenu {
-            .secCasaDeTe__info {
-                padding: 10px;
-                width: 600px;
+            .secGastro__infoMenu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .secGastro__info {
+                    padding: 10px;
+                    width: 600px;
+                }
+                .secGastro__menus {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto auto;
+                    grid-template-areas: 
+                    "secGastro__tituloMenu secGastro__titulosMenEsp"
+                    "secGastro__menu       secGastro__menuEsp"
+                    ;
+                    .secGastro__tituloMenu {
+                        grid-area: secGastro__tituloMenu;
+                    }
+                    .secGastro__menu {
+                        grid-area: secGastro__menu;
+                        margin: 0;
+                    }
+                    .secGastro__titulosMenEsp {
+                        grid-area: secGastro__titulosMenEsp;
+                    }
+                    .secGastro__menuEsp {
+                        grid-area: secGastro__menuEsp;
+                        margin: 0;
+                        padding-bottom: 110px;
+                    }
+                    p {
+                    width: 250px;
+                    }
+                    .laTaberna__cartaDeVinos {
+                        width: auto;
+                        font-size: 15px;
+                    }
+                }
             }
-        }
-        .secCasaDeTe {
-            margin-top: 100px;
-            .secCasaDeTe__fechas {
-                width: 700px;
-                .secCasaDeTe__titFechas {
-                    justify-content: center;
-                    .secCasaDeTe__titHdos {
-                        margin-top: 40px;
-                        h2 {
+            .secGastro {
+                margin-top: 100px;
+                .secGastro__fechas {
+                    width: 700px;
+                    .secGastro__titFechas {
+                        justify-content: center;
+                        .secGastro__titHdos {
+                            margin-top: 40px;
+                            h2 {
                             font-size: 20px;
                             width: auto;
+                            }
                         }
-                    }
-                    .secCasaDeTe__consRedSoc {
-                        h2 {
-                            font-size: 15px;
-                            width: auto;
+                        .secGastro__consRedSoc {
+                            h2 {
+                                font-size: 15px;
+                                width: auto;
+                            }
                         }
                     }
                 }
@@ -215,46 +251,53 @@
 //   =============P=X==============   \\
 
 @media (max-width: 600px) {
-    #casaDeTe {
-        .titCasaDeTe {
-            height: 150px;
-            .titCasaDeTeH2 {
-                font-size: 40px;
-            }
-        }
-        .secCasaDeTe__infoMenu {
-            .secCasaDeTe__info {
-                padding: 10px;
-                width: auto;
-            }
-        }
-        .secCasaDeTe {
-            .secCasaDeTe__fechas {
-                display: flex;
-                flex-direction: column;
-                width: 400px;
-                height: 600px;
-                border: 2px solid #fa8072;
-                padding: 10px;
-                background-color: #373737;
-                .secCasaDeTe__divImg {
-                    width: 100%;
-                }
-                .secCasaDeTe__titFechas {
-                    width: 100%;
+    #mainGastronomia {
+        #gastronomia {
+            .titGastroCasaDeTe {
+                .titGastroH2 {
+                    font-size: 40px;
                 }
             }
-        }
-        .secCasaDeTe__infoMenu {
-            .secCasaDeTe__menus {
-                column-gap: 20px;
-                h3 {
+            .secGastro__infoMenu {
+                .secGastro__info {
+                    padding: 10px;
                     width: auto;
-                    height: auto;
                 }
-                p {
-                    width: auto;
-                    height: auto;
+                .secGastro__menus {
+                    column-gap: 20px;
+                    h3 {
+                        width: auto;
+                        height: auto;
+                    }
+                    p {
+                        width: auto;
+                        height: auto;
+                    }
+                    .secGastro__menu {
+                        padding: 0px;
+                        height: auto;
+                    }
+                    .laTaberna__cartaDeVinos {
+                        width: auto;
+                    }
+                }
+            }
+            .secGastro {
+                .secGastro__fechas {
+                    display: flex;
+                    flex-direction: column;
+                    width: 400px;
+                    height: 600px;
+                    border: 2px solid #fa8072;
+                    padding: 10px;
+                    background-color: #373737;
+                    .secGastroCasaDeTe__divImg,
+                    .secGastroLaTaberna__divImg {
+                        width: 100%;
+                    }
+                    .secGastro__titFechas {
+                        width: 100%;
+                    }
                 }
             }
         }
