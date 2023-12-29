@@ -185,7 +185,7 @@ main {
   height: auto;
 }
 #mainGastronomia #gastronomia .titGastroCasaDeTe, #mainGastronomia #gastronomia .titGastroLaTaberna {
-  background-image: url(../../imagenes/gastronomia/te-verde-oolong-tetera-tazon-grande.jpg);
+  background-image: url(../imagenes/gastronomia/te-verde-oolong-tetera-tazon-grande.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -203,7 +203,7 @@ main {
   text-shadow: 10px 5px 10px #fff7e9;
 }
 #mainGastronomia #gastronomia .titGastroLaTaberna {
-  background-image: url(../../imagenes/gastronomia/cerca-camarero-sirviendo-cerveza.jpg);
+  background-image: url(../imagenes/gastronomia/cerca-camarero-sirviendo-cerveza.jpg);
 }
 #mainGastronomia #gastronomia .secGastro {
   display: flex;
@@ -220,7 +220,7 @@ main {
   background-color: #373737;
 }
 #mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastroCasaDeTe__divImg, #mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastroLaTaberna__divImg {
-  background-image: url(../../imagenes/gastronomia/casa-de-te-tazas-tetera-junto-flores-frente-ventana-dia-lluvioso.jpg);
+  background-image: url(../imagenes/gastronomia/casa-de-te-tazas-tetera-junto-flores-frente-ventana-dia-lluvioso.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -228,7 +228,7 @@ main {
   height: 100%;
 }
 #mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastroLaTaberna__divImg {
-  background-image: url(../../imagenes/gastronomia/pareja-camarera.jpg);
+  background-image: url(../imagenes/gastronomia/pareja-camarera.jpg);
 }
 #mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastro__titFechas {
   display: flex;
