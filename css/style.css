@@ -159,7 +159,7 @@ main {
 
 /* ============================= */
 /* SISTEMA RESPONSIVO INDEX MAIN */
-/* ============================= */
+/* ===========1023PX============ */
 @media (max-width: 1023px) {
   #mainInicio #seccionBienvenidos .titulos h1 {
     font-size: 35px;
@@ -178,6 +178,9 @@ main {
     margin-bottom: 10px;
   }
 }
+/* ============================= */
+/* SISTEMA RESPONSIVO INDEX MAIN */
+/* ===========600PX============= */
 @media (max-width: 600px) {
   #mainInicio #seccionBienvenidos .titulos h1 {
     font-size: 30px;
