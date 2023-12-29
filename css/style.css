@@ -185,7 +185,7 @@ main {
   height: auto;
 }
 #mainGastronomia #gastronomia .titGastroCasaDeTe, #mainGastronomia #gastronomia .titGastroLaTaberna {
-  background-image: url(/imagenes/gastronomia/te-verde-oolong-tetera-tazon-grande.jpg);
+  background-image: url();
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
