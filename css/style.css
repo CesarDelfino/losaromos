@@ -96,7 +96,8 @@ main {
 /* ========================= */
 #mainInicio {
   background-size: cover;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(../imagenes/index/hermosa-zona-fotos-gran-corona-decorada-vegetacion-rosas-centro-mesa-velas-lados-guirnaldas-colgadas-arboles-min.png);
+  background-position: center;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(../imagenes/index/hermosa-zona-fotos-gran-corona-decorada-vegetacion-rosas-centro-mesa-velas-lados-guirnaldas-colgadas-arboles-min.png);
   font-weight: bold;
 }
 #mainInicio #seccionBienvenidos {
@@ -171,6 +172,7 @@ main {
   #mainInicio #seccionBienvenidos .parrafo p {
     font-size: 25px;
     margin: 20px;
+    text-align: center;
   }
   #mainInicio #seccionBienvenidos .linkCotizar a {
     font-size: 35px;
