@@ -208,7 +208,7 @@ main {
   height: auto;
 }
 #mainGastronomia #gastronomia .titGastroCasaDeTe, #mainGastronomia #gastronomia .titGastroLaTaberna {
-  background-image: url(../imagenes/gastronomia/te-verde-oolong-tetera-tazon-grande.jpg);
+  background-image: url(../imagenes/gastronomia/te-verde-oolong-tetera-tazon-grande-min.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -226,7 +226,7 @@ main {
   text-shadow: 10px 5px 10px #fff7e9;
 }
 #mainGastronomia #gastronomia .titGastroLaTaberna {
-  background-image: url(../imagenes/gastronomia/cerca-camarero-sirviendo-cerveza.jpg);
+  background-image: url(../imagenes/gastronomia/cerca-camarero-sirviendo-cerveza-min.png);
 }
 #mainGastronomia #gastronomia .secGastro {
   display: flex;
@@ -243,7 +243,7 @@ main {
   background-color: #373737;
 }
 #mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastroCasaDeTe__divImg, #mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastroLaTaberna__divImg {
-  background-image: url(../imagenes/gastronomia/casa-de-te-tazas-tetera-junto-flores-frente-ventana-dia-lluvioso.jpg);
+  background-image: url(../imagenes/gastronomia/casa-de-te-tazas-tetera-junto-flores-frente-ventana-dia-lluvioso-min-min.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -251,7 +251,7 @@ main {
   height: 100%;
 }
 #mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastroLaTaberna__divImg {
-  background-image: url(../imagenes/gastronomia/pareja-camarera.jpg);
+  background-image: url(../imagenes/gastronomia/pareja-camarera-min.png);
 }
 #mainGastronomia #gastronomia .secGastro .secGastro__fechas .secGastro__titFechas {
   display: flex;
@@ -472,7 +472,7 @@ main {
 }
 #imagenes .areaUnoImg {
   grid-area: areaUnoImg;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(../imagenes/imagenes/salon-restaurante-adornado-flores.jpg);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(../imagenes/imagenes/salon-restaurante-adornado-flores-min.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
